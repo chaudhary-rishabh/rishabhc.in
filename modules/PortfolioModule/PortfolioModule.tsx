@@ -9,8 +9,6 @@ const PortfolioModule = () => {
         <>
             <div className='mainPortfolio'>
                 <PortfolioCard />
-                <PortfolioCard />
-                <SwiperOne />
                 <BottomNav />
             </div>
         </>
