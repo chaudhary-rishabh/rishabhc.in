@@ -4,26 +4,23 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: #F5F5DC;
+  --background-end-rgb: #F5F5DC;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: #F5F5DC;
+    --background-end-rgb: #F5F5DC;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background:  #9cd2f8;
+  font-family: 'lora', sans-serif;
+  background-color: #e8f4ff;
 }
 
 @layer utilities {
@@ -31,3 +28,166 @@ body {
     text-wrap: balance;
   }
 }
+
+.btmNavColorPortfolio { 
+  text-shadow: 2px 2px 10px rgba(255, 255, 255,1) !important;
+  color:rgb(255, 255, 255)
+}
+
+.btmNavColorExp {
+  text-shadow: 2px 2px 10px rgba(255, 255, 255,1);
+  color:rgb(255, 255, 255)
+}
+
+.btmNavColorEdu {
+  text-shadow: 2px 2px 10px rgba(255, 255, 255,1);
+  color:rgb(255, 255, 255)
+}
+
+.btmNavColorSkill {
+  text-shadow: 2px 2px 10px rgba(255, 255, 255,1);
+  color:rgb(255, 255, 255)
+}
+
+/* testing classes and other css */
+.testColor{
+  background-color: #ffecd1;
+}
+.textColor{
+  color: #0D47A1;
+  font-weight: bold;
+  text-align: center;
+  font-size: 11px;
+}
+.btn-header{
+  font-family: 'merriweather', sans-serif;
+  font-weight: 400;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.851);
+  color: #fff;
+}
+.btn-header:hover {
+  border-radius: 20px;
+  text-shadow: 2px 2px 10px rgba(233, 226, 226, 0.934);
+}
+.btn-header-active {
+  border-radius: 20px;
+  font-weight: 900;
+  text-shadow: 2px 4px 15px rgba(255, 255, 255, 0.964);
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px; /* Optional: add padding to avoid buttons touching the edges */
+  z-index: 1000; /* Optional: adjust z-index to ensure it's on top */
+}
+
+/* Flex container for buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Adjust the gap between buttons */
+}
+
+.fixed-top {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  margin: auto;
+  z-index: 1000; /* Optional: adjust z-index to ensure it's on top */
+}
+
+@media only screen and (min-width: 1100px) {
+  .fixed-top {
+    left: 9%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .fixed-top {
+    left: 2%;
+  }
+}
+@media only screen and (max-width: 900px) {
+    .btn-header{
+      border-radius: 20px;
+      width: 25%;
+      padding: 4px 12px 4px 12px;
+      font-size: 11px;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+/* swiper */
+.swiper {
+  margin: 100px auto;
+  width: 320px;
+  height: 240px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  border-radius: 30px;
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+  border-radius: 30px;
+  background-color: rgb(0, 140, 255);
+}
+
+.swiper-slide:nth-child(3n) {
+  border-radius: 30px;
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  border-radius: 30px;
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  border-radius: 30px;
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  border-radius: 30px;
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  border-radius: 30px;
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  border-radius: 30px;
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  border-radius: 30px;
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  border-radius: 30px;
+  background-color: rgb(54, 94, 77);
+}
+
+
