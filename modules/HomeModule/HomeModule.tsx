@@ -8,9 +8,6 @@ const HomeModule = () => {
     return (
         <>
             <SwiperOne />
-            {/* <SwiperTwo /> */}
-            <SwiperThree />
-            <SwiperOne />
             <SwiperThree />
         </>
     )

@@ -10,21 +10,21 @@ const PortfolioCard = () => {
             live: 'https://sakmap.com/',
             img: '/rishabh-project-two.png',
             github: 'https://github.com/chaudhary-rishabh',
-            type: 'Course Selling'
+            type: 'Course Selling Project'
         },
         {
             name: 'Yogice Frontend Web Application',
             live: 'https://yogice.in/',
             img: '/rishabh-project-one.png',
             github: 'https://github.com/chaudhary-rishabh',
-            type: 'Ecommerce Application'
+            type: 'Ecommerce Application Project'
         }
     ];
 
     return (
         <>
             {projects.map((project, index) => (
-                <div key={index} className="w-80 mt-24 m-auto bg-white shadow rounded-3xl">
+                <div key={index} className="w-80 my-24 m-auto bg-white shadow rounded-3xl">
                     <div
                         className="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center rounded-3xl"
                         style={{ backgroundImage: `url(${project.img})` }}
@@ -36,7 +36,7 @@ const PortfolioCard = () => {
                         </div>
                     </div>
                     <div className="p-4 flex flex-col items-center">
-                        <p className="text-gray-400 font-light text-xs text-center pointer" onClick={() => window.open(project.github, '_blank')}>
+                        <p className="text-gray-400 font-light text-xs text-center cursor-pointer" onClick={() => window.open(project.github, '_blank')}>
                             Github <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                         </p>
                         <h1 className="text-gray-800 text-center mt-1">{project.type}</h1>
