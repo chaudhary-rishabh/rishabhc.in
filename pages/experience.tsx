@@ -7,7 +7,7 @@ const Experience = () => {
     return (
         <>
             <Head>
-                <title>Experience | Rishabh</title>
+                <title>Experience | Rishabh Chaudhary</title>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Learn about the professional experience of Rishabh, including roles in full-stack development, DevOps, and projects utilizing TypeScript, Next.js, Node.js, AWS, and more." />

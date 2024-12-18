@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <>
             <Head>
-                <title>Contact | Rishabh</title>
+                <title>Contact | Rishabh Chaudhary</title>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Get in touch with Rishabh, an experienced full-stack developer and DevOps specialist." />

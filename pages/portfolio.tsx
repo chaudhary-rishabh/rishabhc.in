@@ -7,7 +7,7 @@ const Portfolio = () => {
     return (
         <>
             <Head>
-                <title>Portfolio | Rishabh</title>
+                <title>Portfolio | Rishabh Chaudhary</title>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Explore the portfolio of Rishabh, showcasing expertise in full-stack development, DevOps, and modern technologies." />
