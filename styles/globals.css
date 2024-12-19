@@ -208,7 +208,7 @@ body {
   }
 } */
 
-
+/* 
 .icon-glow {
   filter: drop-shadow(0 0 2px #ffffff) 
           drop-shadow(0 0 1px #7eb3ff) 
@@ -228,4 +228,118 @@ body {
             drop-shadow(0 0 3px #0555bd);
   }
 }
+ */
 
+ /* General glow animation */
+@keyframes glow {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.icon-glow {
+  animation: glow 1.5s infinite alternate;
+  margin: 8px;
+}
+
+/* ReactJS - Blue */
+.react-icon {
+  color: #61dafb; /* ReactJS logo color */
+  filter: drop-shadow(0 0 1px #c7e9f3) drop-shadow(0 0 2px #21a1f1);
+}
+
+/* Next.js - Black */
+.nextjs-icon {
+  color: #000000; /* Next.js logo color */
+  filter: drop-shadow(0 0 1px #000000) drop-shadow(0 0 2px #4d4d4d);
+}
+
+/* TypeScript - Blue */
+.ts-icon {
+  color: #3178c6; /* TypeScript logo color */
+  filter: drop-shadow(0 0 1px #3178c6) drop-shadow(0 0 2px #2b6fb3);
+}
+
+/* JavaScript - Yellow */
+.js-icon {
+  color: #f7df1e; /* JavaScript logo color */
+  background: #edebd8;
+  filter: drop-shadow(0 0 1px #f7df1e) drop-shadow(0 0 3px #d4c214);
+}
+
+/* Express.js - Grey */
+.express-icon {
+  color: #787878; /* Express.js logo color */
+  filter: drop-shadow(0 0 1px #787878) drop-shadow(0 0 2px #5f5f5f);
+}
+
+/* Node.js - Green */
+.node-icon {
+  color: #339933; /* Node.js logo color */
+  filter: drop-shadow(0 0 1px #f2f6f2) drop-shadow(0 0 2px #383c38);
+}
+
+/* MySQL - Blue and Orange */
+.mysql-icon {
+  color: #00758f; /* MySQL logo primary color */
+  filter: drop-shadow(0 0 1px #00758f) drop-shadow(0 0 2px #005f6f);
+}
+
+/* MongoDB - Green */
+.mongodb-icon {
+  color: #47a248; /* MongoDB logo color */
+  filter: drop-shadow(0 0 1px #768776) drop-shadow(0 0 2px #3a823b);
+}
+
+/* Redux - Purple */
+.redux-icon {
+  color: #764abc; /* Redux logo color */
+  filter: drop-shadow(0 0 1px #764abc) drop-shadow(0 0 2px #5f3c96);
+}
+
+/* Jenkins - Red */
+.jenkins-icon {
+  color: #d24939; /* Jenkins logo color */
+  filter: drop-shadow(0 0 1px #d24939) drop-shadow(0 0 5px #a33a2e);
+}
+
+/* AWS - Orange */
+.aws-icon {
+  color: #ff9900; /* AWS logo color */
+  filter: drop-shadow(0 0 0px #897d6c) drop-shadow(0 0 2px #cc7a00);
+}
+
+/* Kubernetes - Blue */
+.kubernetes-icon {
+  color: #326ce5; /* Kubernetes logo color */
+  filter: drop-shadow(0 0 1px #326ce5) drop-shadow(0 0 2px #2652b8);
+}
+
+/* Docker - Blue */
+.docker-icon {
+  color: #2496ed; /* Docker logo color */
+  filter: drop-shadow(0 0 1px #2496ed) drop-shadow(0 0 2px #1c7fc7);
+}
+
+/* TailwindCSS - Teal */
+.tailwind-icon {
+  color: #38bdf8; /* TailwindCSS logo color */
+  filter: drop-shadow(0 0 1px #38bdf8) drop-shadow(0 0 2px #2a99c6);
+}
+
+/* Bootstrap - Purple */
+.bootstrap-icon {
+  color: #7952b3; /* Bootstrap logo color */
+  filter: drop-shadow(0 0 1px #7952b3) drop-shadow(0 0 2px #5e4194);
+}
+
+/* PostgreSQL - Blue */
+.postgresql-icon {
+  color: #336791; /* PostgreSQL logo color */
+  filter: drop-shadow(0 0 1px #336791) drop-shadow(0 0 2px #285476);
+}
