@@ -24,7 +24,7 @@ const PortfolioCard = () => {
     return (
         <>
             {projects.map((project, index) => (
-                <div key={index} className="w-80 my-24 m-auto bg-white shadow rounded-3xl">
+                <div key={index} className="w-80 my-24 m-auto bg-white shadow-md shadow-blue-400/60 p-2 animate-border-gradient rounded-3xl">
                     <div
                         className="h-48 w-full bg-gray-200 flex flex-col justify-between p-4 bg-cover bg-center rounded-3xl"
                         style={{ backgroundImage: `url(${project.img})` }}

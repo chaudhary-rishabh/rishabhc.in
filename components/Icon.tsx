@@ -4,7 +4,7 @@ import { SiNextdotjs, SiTypescript, SiJavascript, SiExpress, SiMongodb, SiRedux,
 
 const TechStackIcons = () => {
     return (
-        <div className="grid grid-cols-4 w-80 mx-auto mt-24 border-2 gap-4 text-4xl text-blue-500 border-blue-300 rounded-3xl shadow-2xl shadow-blue-300 bg-white p-8 animate-border-gradient">
+        <div className="grid grid-cols-4 w-80 mx-auto mt-24 border gap-4 text-4xl text-blue-500 border-blue-300 rounded-3xl shadow-2xl shadow-blue-300 bg-white p-8 animate-border-gradient">
             <div className="icon-glow" title="ReactJS"><FaReact /></div>
             <div className="icon-glow" title="Next.js"><SiNextdotjs /></div>
             <div className="icon-glow" title="TypeScript"><SiTypescript /></div>
