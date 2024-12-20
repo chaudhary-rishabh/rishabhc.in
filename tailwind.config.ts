@@ -11,13 +11,13 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        'resize-opacity': 'resize-opacity 6s infinite',
+        'resize-opacity': 'resize-opacity 5s infinite',
       },
       keyframes: {
         'resize-opacity': {
           '0%, 100%': {
             transform: 'scale(1)',
-            opacity: '0.8',
+            opacity: '0.9',
           },
           '50%': {
             transform: 'scale(1.05)',

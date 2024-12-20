@@ -38,13 +38,13 @@ const Wizard = () => {
 
                         {/* Icon aligned to the left */}
                         <div className="flex justify-end w-[20%]">
-                            <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-md shadow-blue-300">
+                            <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-2xl shadow-blue-300">
                                 {step.icon}
                             </div>
                         </div>
 
                         {/* Experience Details aligned to the right */}
-                        <div className="ml-6 w-[70%] bg-white border border-blue-400 p-6 shadow-2xl shadow-blue-300/70 rounded-3xl text-left text-blue-500 animate-resize-opacity">
+                        <div className="ml-6 w-[70%] text-blue-500 text-shadow bg-white border border-blue-400 p-6 shadow-2xl shadow-blue-300/70 rounded-3xl text-left animate-resize-opacity">
                             <h3 className="text-xl font-bold">{step.title}</h3>
                             <p className="mb-2 italic">{step.company}, {step.duration}</p>
                             <p>{step.description}</p>
