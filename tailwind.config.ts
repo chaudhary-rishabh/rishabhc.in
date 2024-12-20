@@ -10,6 +10,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        'resize-opacity': 'resize-opacity 6s infinite',
+      },
+      keyframes: {
+        'resize-opacity': {
+          '0%, 100%': {
+            transform: 'scale(1)',
+            opacity: '0.8',
+          },
+          '50%': {
+            transform: 'scale(1.05)',
+            opacity: '1',
+            boxShadow: '0px 3px 15px #60A5FAB3'
+          },
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

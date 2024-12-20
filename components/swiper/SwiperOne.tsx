@@ -34,14 +34,6 @@ export default function SwiperOne() {
                     <h3 className="z-10 mt-3 text-lg font-bold bg-blue-300/10 w-3/4 backdrop-blur-2xl rounded-2xl pl-2 text-gray-700">Rishabh Chaudhary</h3>
                     <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-500">Software Developer</div>
                 </article></SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
             </Swiper>
         </>
     );
