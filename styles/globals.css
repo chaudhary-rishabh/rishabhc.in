@@ -99,6 +99,10 @@ body {
   z-index: 1000; /* Optional: adjust z-index to ensure it's on top */
 }
 
+.text-shadow{
+  text-shadow: 0px 3px 10px #71a3ed;
+}
+
 @media only screen and (min-width: 1100px) {
   .fixed-top {
     left: 9%;
