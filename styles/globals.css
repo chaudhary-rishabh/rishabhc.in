@@ -102,6 +102,9 @@ body {
 .text-shadow{
   text-shadow: 0px 3px 10px #71a3ed;
 }
+.text-shadow1{
+  text-shadow: 3px 1px 5px #3771f0;
+}
 
 @media only screen and (min-width: 1100px) {
   .fixed-top {

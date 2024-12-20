@@ -28,22 +28,22 @@ const HorizontalSlider: React.FC<HorizontalSliderProps> = ({ items }) => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                 },
             },
         ],
     };
 
     return (
-        <div className="w-full">
+        <>
             <Slider {...horizontalSettings}>
                 {items.map((item, index) => (
-                    <div key={index} className="text-center text-lg font-semibold text-blue-500">
+                    <div key={index} className="text-center text-sm font-semibold text-black text-shadow1">
                         {item}
                     </div>
                 ))}
             </Slider>
-        </div>
+        </>
     );
 };
 

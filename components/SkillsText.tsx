@@ -41,7 +41,7 @@ const SkillsText = () => {
                 </div>
             </div>
             <div className="mx-auto w-80 grid grid-cols-2">
-                <div className="grid grid-cols-5 w-80 mt-4 border gap-5 text-blue-500 border-blue-300 rounded-3xl shadow-2xl shadow-blue-300 bg-white p-4 animate-border-gradient">
+                <div className="w-80 text-base my-5 gap-2 text-blue-500 border-blue-300 rounded-3xl shadow-2xl shadow-blue-300 bg-white p-4 animate-border-gradient">
                     <HorizontalSlider items={technicalSkills} />
                 </div>
             </div>
