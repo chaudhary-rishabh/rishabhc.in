@@ -45,9 +45,9 @@ const Wizard = () => {
 
                         {/* Experience Details aligned to the right */}
                         <div className="ml-6 w-[70%] text-blue-500 text-shadow bg-white border border-blue-400 p-6 shadow-2xl shadow-blue-300/70 rounded-3xl text-left animate-resize-opacity">
-                            <h3 className="text-xl font-bold">{step.title}</h3>
-                            <p className="mb-2 italic">{step.company}, {step.duration}</p>
-                            <p>{step.description}</p>
+                            <h3 className="text-xl text-gray-800 font-bold">{step.title}</h3>
+                            <p className="mb-2 text-gray-700 italic">{step.company}, {step.duration}</p>
+                            <p className='text-gray-600'>{step.description}</p>
                         </div>
 
                         {/* Line connecting icons (only for non-last elements) */}
