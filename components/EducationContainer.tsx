@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const EducationContainer = () => {
@@ -12,7 +13,14 @@ const EducationContainer = () => {
                     Complemented by certifications in <b>specialized courses</b>.
                     Learning has always been my passion, and I constantly seek to enhance my skills and knowledge.
                 </p>
-
+                <button type="button" className="text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-2">
+                    <Image src="/rishabh_udemy_course.png" alt="rishabh course udemy" width={100} height={100} />
+                    Full Stack Developer
+                </button>
+                <button type="button" className="text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-2">
+                    <Image src="/rishabh_edx_course.png" alt="rishabh course udemy" width={70} height={70} />
+                    CS50 Computer Science
+                </button>
             </section>
         </div>
     )
