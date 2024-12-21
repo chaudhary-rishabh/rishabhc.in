@@ -21,7 +21,7 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className="flex lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5 font-semibold hover:underline">
+                    <Link href="https://flowcv.com/resume/f1usckjdmt" className="-m-1.5 p-1.5 font-semibold hover:underline">
                         Resume
                     </Link>
                 </div>
