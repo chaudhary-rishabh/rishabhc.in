@@ -1,5 +1,5 @@
 import React from "react";
-// import VerticalSlider from "./autoslider/VerticalSlider";
+import VerticalSlider from "./autoslider/VerticalSlider";
 import HorizontalSlider from "./autoslider/HorizontalSlider";
 
 const SkillsText = () => {
@@ -63,7 +63,7 @@ const SkillsText = () => {
         <>
             <div className="mx-auto w-80 grid grid-cols-2">
                 <div className="w-36 mt-5 gap-2 text-4xl text-blue-500 border-blue-300 rounded-3xl shadow-2xl shadow-blue-300 bg-white p-4 animate-border-gradient">
-                    {/* <VerticalSlider items={softSkills} /> */}
+                    <VerticalSlider items={softSkills} />
                 </div>
                 <div className="w-40 mt-5 gap-4 text-3xl text-blue-500/80 border-blue-300 rounded-3xl shadow-2xl shadow-blue-300 bg-white p-4 animate-border-gradient">
                     <ol>

@@ -27,14 +27,14 @@ const Wizard = () => {
     ];
 
     return (
-        <div className="flex w-96 flex-col items-center py-24">
-            <div className="relative w-full max-w-xl">
+        <div className="flex w-96 mx-auto flex-col items-center py-24">
+            <div className="relative mx-auto w-full max-w-xl">
 
                 {/* Vertical Line connecting all icons */}
                 <div className="absolute left-[10%] transform-translate-x-1/2 h-full w-1 bg-white opacity-50 z-0"></div>
 
                 {steps.map((step, index) => (
-                    <div key={index} className="relative z-10 flex items-center mb-16 md:mb-20">
+                    <div key={index} className="relative mx-auto z-10 flex items-center mb-16 md:mb-20">
 
                         {/* Icon aligned to the left */}
                         <div className="flex justify-end w-[20%]">
