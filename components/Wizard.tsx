@@ -19,9 +19,9 @@ const Wizard = () => {
         },
         {
             title: 'Software Developer',
-            duration: '9 months',
+            duration: '9 months - Present',
             company: 'Alois',
-            description: 'Worked on Frontend Nextjs and Backend Spring Boot',
+            description: 'Worked on Frontend Nextjs and Backend Java Spring Boot',
             icon: <FaBriefcase className="text-blue-500 w-8 h-8" />,
         },
     ];

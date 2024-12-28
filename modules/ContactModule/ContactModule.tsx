@@ -37,17 +37,17 @@ const ContactModule = () => {
                     </Link>
                 </div>
                 <div className="flex justify-center align-center lg:flex-1">
-                    <Link href="https://discord.com/your-discord-link" className="-m-1.5 p-1.5">
+                    <Link href="https://discordapp.com/users/1022556961063047178" className="-m-1.5 p-1.5">
                         <FaDiscord className="text-blue-500" style={{ fontSize: '26px' }} />
                     </Link>
                 </div>
                 <div className="flex  justify-center align-center lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5">
+                    <Link href="https://x.com/Rishabh76216186" className="-m-1.5 p-1.5">
                         <FaTwitter className='text-blue-500' style={{ fontSize: '26px' }} />
                     </Link>
                 </div>
                 <div className="flex  justify-center align-center lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5">
+                    <Link href="mailto:chaudharyrishabh029@gmail.com" className="-m-1.5 p-1.5">
                         <FaEnvelope className='text-blue-500' style={{ fontSize: '26px' }} />
                     </Link>
                 </div>
