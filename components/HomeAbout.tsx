@@ -18,9 +18,12 @@ const HomeAbout = () => {
 
     return (
         <div className='w-80 mx-auto max-w-sm'>
-            <HomeHorizontalSlider items={Skills.map(skill => skill.icon)} />
-            <p className='text-black font-bold text-base'>
-                Hii, I am Rishabh, Software Developer Expert in DevOps and Cloud
+            <HomeHorizontalSlider />
+            <p className='text-black font-medium text-base'>
+                Hii, I am Rishabh, Full Stack Developer Expert in <b>MERN Stack, Typescript, Nextjs, Tailwindcss, and DevOps</b>
+            </p><br></br>
+            <p className='text-black font-medium text-base'>
+                I have a passion for learning and sharing my knowledge with others as publicly as possible.I am constantly seeking to enhance my skills and knowledge.
             </p>
         </div>
     )

@@ -32,7 +32,7 @@ export default function SwiperOne() {
                     <Image src="/rishabh-home-img.png" width={700} height={700} alt="Rishabh Portfolio Home" className="absolute inset-0 h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-blue-300/60 via-white/10"></div>
                     <h3 className="z-10 mt-3 text-lg font-bold bg-blue-300/10 w-3/4 backdrop-blur-2xl rounded-2xl pl-2 text-gray-700">Rishabh Chaudhary</h3>
-                    <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-500">Software Developer</div>
+                    <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 p-1 text-gray-700">MERN Stack Developer</div>
                 </article></SwiperSlide>
             </Swiper>
         </>

@@ -1,6 +1,5 @@
 'use client'
 
-import { FaPhoneAlt, FaLinkedin, FaGithub, FaFilePdf } from 'react-icons/fa';
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -16,17 +15,17 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className="flex lg:flex-1">
-                    <Link href="/contact" className="-m-1.5 p-1.5 font-semibold  hover:underline">
+                    <Link href="/contact" className="-m-1.5 text-black p-1.5 font-semibold  hover:underline">
                         {contactTitle}
                     </Link>
                 </div>
                 <div className="flex lg:flex-1">
-                    <Link href="https://flowcv.com/resume/f1usckjdmt" className="-m-1.5 p-1.5 font-semibold hover:underline">
+                    <Link href="https://flowcv.com/resume/f1usckjdmt" className="-m-1.5 text-black p-1.5 font-semibold hover:underline">
                         Resume
                     </Link>
                 </div>
                 <div className="flex lg:flex-1">
-                    <Link href="https://www.linkedin.com/in/rishabh029/" className="-m-1.5 p-1.5 font-semibold hover:underline">
+                    <Link href="https://www.linkedin.com/in/rishabh029/" className="-m-1.5 p-1.5 text-black font-semibold hover:underline">
                         Blog
                     </Link>
                 </div>

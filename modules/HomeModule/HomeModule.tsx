@@ -1,4 +1,3 @@
-import HorizontalSlider from '@/components/autoslider/HorizontalSlider'
 import HomeAbout from '@/components/HomeAbout'
 import SwiperOne from '@/components/swiper/SwiperOne'
 import React from 'react'
