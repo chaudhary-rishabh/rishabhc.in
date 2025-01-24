@@ -4,11 +4,11 @@ import { FaBriefcase, FaLaptopCode, FaGraduationCap } from 'react-icons/fa';
 const Wizard = () => {
     const steps = [
         {
-            title: 'MERN Stack',
-            duration: '6 months',
-            company: 'N10Technosoft',
-            description: 'Worked as an intern to gain initial experience in the industry.',
-            icon: <FaLaptopCode className="text-blue-500 w-8 h-8" />,
+            title: 'Software Developer',
+            duration: '10 months - Present',
+            company: 'Alois',
+            description: 'Worked on Frontend Nextjs and Expressjs',
+            icon: <FaBriefcase className="text-blue-500 w-8 h-8" />,
         },
         {
             title: 'Full Stack Developer',
@@ -18,11 +18,11 @@ const Wizard = () => {
             icon: <FaBriefcase className="text-blue-500 w-8 h-8" />,
         },
         {
-            title: 'Software Developer',
-            duration: '9 months - Present',
-            company: 'Alois',
-            description: 'Worked on Frontend Nextjs and Backend Java Spring Boot',
-            icon: <FaBriefcase className="text-blue-500 w-8 h-8" />,
+            title: 'MERN Stack',
+            duration: '6 months',
+            company: 'N10Technosoft',
+            description: 'Worked as an intern to gain initial experience in the industry.',
+            icon: <FaLaptopCode className="text-blue-500 w-8 h-8" />,
         },
     ];
 
@@ -44,7 +44,7 @@ const Wizard = () => {
                         </div>
 
                         {/* Experience Details aligned to the right */}
-                        <div className="ml-6 w-[70%] text-blue-500 text-shadow bg-white p-6 shadow-2xl shadow-blue-300/70 rounded-3xl text-left animate-resize-opacity">
+                        <div className="ml-6 w-[70%] border border-blue-300 text-blue-500 text-shadow bg-white p-6 shadow-2xl shadow-blue-300/70 rounded-3xl text-left animate-resize-opacity">
                             <h3 className="text-xl text-gray-800 font-bold">{step.title}</h3>
                             <p className="mb-2 text-gray-700 italic">{step.company}, {step.duration}</p>
                             <p className='text-gray-600'>{step.description}</p>
