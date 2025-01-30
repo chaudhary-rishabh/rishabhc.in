@@ -28,7 +28,7 @@ export default function SwiperOne() {
                 modules={[EffectCreative]}
                 className="mySwiper"
             >
-                <SwiperSlide><article className="relative isolate flex flex-col justify-end overflow-hidden rounded-3xl px-8 pt-44 max-w-sm mx-auto">
+                <SwiperSlide><article className="relative isolate flex flex-col justify-end overflow-hidden rounded-3xl px-8 pt-36 max-w-sm mx-auto">
                     <Image src="/rishabh-home-img.png" width={700} height={700} alt="Rishabh Portfolio Home" className="absolute inset-0 h-full w-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-blue-300/60 via-white/10"></div>
                     <h3 className="z-10 mt-3 text-lg font-bold bg-blue-300/10 w-3/4 backdrop-blur-2xl rounded-2xl pl-2 text-gray-700">Rishabh Chaudhary</h3>
