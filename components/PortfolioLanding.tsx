@@ -269,15 +269,17 @@ export default function PortfolioLanding() {
     useEffect(() => setHasMounted(true), []);
     if (!hasMounted) return null;
 
-    const renderSectionContent = () => {
-        switch (activeSection) {
+    const renderSectionContent = (sectionId: string) => {
+        switch (sectionId) {
             case "skills":
-                return <Profile />
+                return <Profile />;
             case "certification":
-                return <CertificationSection />
+                return <CertificationSection />;
             case "experience":
-                return <BubbleExperience />
+                return <BubbleExperience />;
             default:
+                const currentSection = sections.find((section) => section.id === sectionId);
+                const currentProject = currentSection?.projects?.[0];
                 return currentProject ? (
                     <motion.div
                         className="relative order-1 lg:order-2"
@@ -449,7 +451,6 @@ export default function PortfolioLanding() {
                 <div ref={contentRef} className="space-y-32 py-16">
                     {/* Portfolio Section */}
                     <div ref={portfolioRef} className="min-h-screen flex items-center justify-center">
-                        {activeSection === "portfolio" && (
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key="portfolio"
@@ -459,15 +460,13 @@ export default function PortfolioLanding() {
                                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                                     className="flex justify-center w-full sm:w-2/5 mx-auto items-center"
                                 >
-                                    {renderSectionContent()}
+                                    {renderSectionContent("portfolio")}
                                 </motion.div>
                             </AnimatePresence>
-                        )}
                     </div>
 
                     {/* Skills Section */}
                     <div ref={skillsRef} className="min-h-screen flex items-center justify-center">
-                        {activeSection === "skills" && (
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key="skills"
@@ -477,15 +476,13 @@ export default function PortfolioLanding() {
                                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                                     className="flex justify-center w-full sm:w-2/5 mx-auto items-center"
                                 >
-                                    {renderSectionContent()}
+                                    {renderSectionContent("skills")}
                                 </motion.div>
                             </AnimatePresence>
-                        )}
                     </div>
 
                     {/* Certification Section */}
                     <div ref={certificationRef} className="min-h-screen flex items-center justify-center">
-                        {activeSection === "certification" && (
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key="certification"
@@ -495,15 +492,13 @@ export default function PortfolioLanding() {
                                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                                     className="w-full"
                                 >
-                                    {renderSectionContent()}
+                                {renderSectionContent("certification")}
                                 </motion.div>
                             </AnimatePresence>
-                        )}
                     </div>
 
                     {/* Experience Section */}
                     <div ref={experienceRef} className="min-h-screen flex items-center justify-center">
-                        {activeSection === "experience" && (
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key="experience"
@@ -513,10 +508,9 @@ export default function PortfolioLanding() {
                                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                                     className="w-full"
                                 >
-                                    {renderSectionContent()}
+                                    {renderSectionContent("experience")}
                                 </motion.div>
                             </AnimatePresence>
-                        )}
                     </div>
                 </div>
 
