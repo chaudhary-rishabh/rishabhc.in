@@ -4,7 +4,7 @@ const Profile = () => {
     return (
         <div className='bg-white rounded-3xl shadow-2xl shadow-orange-200 p-6 mx-auto mt-10'>
             {/* Profile Section Header */}
-            <h1 className="text-2xl font-bold text-center text-black my-3">Profile Section</h1>
+            <h1 className="text-2xl font-bold text-center text-black my-3">About</h1>
 
             <p className="text-gray-600 py-2 sm:text-md text-sm">
                 I&rsquo;m a <strong>Full Stack Developer</strong> passionate about building impactful web applications. I&rsquo;ve <strong>developed and deployed</strong> products like{' '}

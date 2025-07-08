@@ -300,7 +300,7 @@ export default function PortfolioLanding() {
                                             className="w-full h-64 rounded-3xl bg-gradient-to-br from-white to-white shadow-2xl shadow-orange-200/60 mb-6 flex items-center justify-center"
                                         >
                                             {/* image here */}
-                                            <div className="w-full h-full rounded-3xl bg-white/10 backdrop-blur-xs">
+                                            <div className="w-full h-full border border-orange-500 rounded-3xl bg-white/10 backdrop-blur-xs">
                                                 <Image
                                                     src={currentProject.image}
                                                     height={400}
