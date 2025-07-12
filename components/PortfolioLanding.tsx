@@ -27,6 +27,7 @@ import ModernCarousel from "./carousel/modern-carousel"
 import BubbleExperience from "./experience/BubbleExperience"
 import Profile from "./profile/profile"
 import Image from "next/image"
+import EnhancedSkillsSection from "./profile/enhanced-skills-section"
 
 // Enhanced sections with multiple projects
 const sections = [
@@ -269,7 +270,7 @@ export default function PortfolioLanding() {
     useEffect(() => setHasMounted(true), []);
     if (!hasMounted) return null;
 
-    const renderSectionContent = (sectionId: string) => {
+    const renderSectionContent = (sectionId: string, projectIndex?: number) => {
         switch (sectionId) {
             case "skills":
                 return <Profile />;
@@ -279,7 +280,8 @@ export default function PortfolioLanding() {
                 return <BubbleExperience />;
             default:
                 const currentSection = sections.find((section) => section.id === sectionId);
-                const currentProject = currentSection?.projects?.[0];
+                // const currentProject = currentSection?.projects?.[0];
+                const currentProject = currentSection?.projects?.[projectIndex ?? 0];
                 return currentProject ? (
                     <motion.div
                         className="relative order-1 lg:order-2"
@@ -305,8 +307,8 @@ export default function PortfolioLanding() {
                                             <div className="w-full h-full border border-orange-500 rounded-3xl bg-white/10 backdrop-blur-xs">
                                                 <Image
                                                     src={currentProject.image}
-                                                    height={400}
-                                                    width={400}
+                                                    height={600}
+                                                    width={600}
                                                     alt="Rishabh Profile"
                                                     className="w-full h-full mx-auto rounded-3xl object-cover"
                                                 />
@@ -460,7 +462,7 @@ export default function PortfolioLanding() {
                                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                                     className="flex justify-center w-full sm:w-2/5 mx-auto items-center"
                                 >
-                                    {renderSectionContent("portfolio")}
+                                {renderSectionContent("portfolio", currentProjectIndex)}
                                 </motion.div>
                             </AnimatePresence>
                     </div>
@@ -513,6 +515,7 @@ export default function PortfolioLanding() {
                             </AnimatePresence>
                     </div>
                 </div>
+                <EnhancedSkillsSection />
 
                 <ContactForm />
 

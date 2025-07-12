@@ -79,7 +79,7 @@ export default function HorizontalCarousel() {
 
         let animationId: number
         let scrollPosition = 0
-        const scrollSpeed = 0.6
+        const scrollSpeed = 1.5
 
         const animate = () => {
             scrollPosition += scrollSpeed

@@ -7,6 +7,8 @@ import Image from "next/image"
 import {
     Sparkles,
 } from "lucide-react"
+import EnhancedSkillsSection from "./profile/enhanced-skills-section"
+import SkillsText from "./SkillsText"
 const skills = [
     { name: "AWS", icon: Cloud, color: "bg-orange-500" },
     // { name: "MERN Stack", icon: Code, color: "bg-green-500" },
@@ -56,7 +58,7 @@ export default function LandingImage() {
     return (
         <div className="h-4/5 sm:h-screen sm:w-4/5 mx-auto mb-5 flex items-center rounded-3xl justify-center p-2 md:p-4 overflow-hidden">
             <div className="mt-5 sm:-mt-32 relative w-full h-full flex items-center justify-center">
-                <motion.div variants={itemVariants} className="mb-[550px] z-50">
+                <motion.div variants={itemVariants} className="mb-[580px] z-50">
                     <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-100 to-orange-50 px-4 py-2 rounded-2xl border border-orange-200/50 mb-8">
                         <Sparkles className="w-4 h-4 text-orange-500" />
                         <span className="text-orange-600 font-medium text-sm sm:text-md">Hi, I&#39;m Rishabh | Full Stack Engineer</span>
@@ -135,19 +137,20 @@ export default function LandingImage() {
                 >
                     <div className="relative">
                         <motion.div
-                            className="w-64 h-72 md:w-48 md:h-48 lg:w-96 lg:h-96 rounded-3xl bg-white/5 backdrop-blur-xs p-1"
+                            className="w-72 h-96 md:w-48 md:h-52 lg:w-96 lg:h-96 rounded-3xl bg-white/25 backdrop-blur-xs p-1"
                             style={{borderRadius: "40px"}}
                         >
                             <div className="w-full h-full rounded-3xl bg-white/10 backdrop-blur-xs p-1 md:p-2" style={{ borderRadius: "40px" }}>
                                 <Image
-                                    height={400}
+                                    height={300}
                                     width={400}
                                     src="/rishabh profile casual2.png"
                                     alt="Rishabh Profile"
-                                    className="w-full h-full mx-auto rounded-3xl object-cover"
+                                    className="w-full h-3/4 mx-auto rounded-3xl object-cover"
                                     style={{ borderRadius: "40px" }}
                                 />
                             </div>
+                            <SkillsText />
                         </motion.div>
                     </div>
                 </motion.div>
@@ -177,7 +180,7 @@ export default function LandingImage() {
                     }}
                 >
                     <motion.div
-                        className="bg-white/95 mb-[450px] sm:mb-96 sm:ml-14 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
+                        className="bg-white/95 mb-[530px] sm:mb-96 sm:ml-14 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
                         animate={{
                             y: [0, -8, 0],
                             boxShadow: [
@@ -210,8 +213,6 @@ export default function LandingImage() {
                             <div className="w-1 h-1 md:w-2 md:h-2 bg-green-400 rounded-full animate-pulse"></div>
                         </div>
                         <p className="text-gray-800 font-medium text-xs md:text-sm leading-relaxed">
-                            Problem-Solving Specialist
-                            <br />
                             Building Scalable Web Apps
                         </p>
                     </motion.div>
@@ -240,7 +241,7 @@ export default function LandingImage() {
                     }}
                 >
                     <motion.div
-                        className="bg-white/95 mt-80 sm:mt-96 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
+                        className="bg-white/95 mt-[380px] sm:mt-96 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
                         animate={{
                             y: [0, -6, 0],
                             boxShadow: [
@@ -275,7 +276,7 @@ export default function LandingImage() {
                             <div className="w-1 h-1 md:w-2 md:h-2 bg-orange-400 rounded-full animate-pulse"></div>
                         </div>
                         <p className="text-gray-800 font-medium text-xs md:text-sm leading-relaxed">
-                            Versatile Full Stack Developer with AWS and end-to-end expertise
+                            Versatile Full Stack Developer with end-to-end expertise
                         </p>
                     </motion.div>
                 </motion.div>
