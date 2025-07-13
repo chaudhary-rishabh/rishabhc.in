@@ -290,7 +290,7 @@ export default function PortfolioLanding() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
                         >
-                            <p className="text-gray-700 italic mb-3">"{currentProject.testimonial.text}"</p>
+                            <p className="text-gray-700 italic mb-3">{currentProject.testimonial.text}</p>
                             <div className="text-sm">
                                 <p className="font-semibold text-gray-800">{currentProject.testimonial.author}</p>
                                 <p className="text-gray-600">{currentProject.testimonial.role}</p>
