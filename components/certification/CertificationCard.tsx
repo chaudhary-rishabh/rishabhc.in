@@ -31,7 +31,7 @@ export default function CertificationCard({ certification, index }: Certificatio
             className="group relative"
         >
             <div
-                className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${certification.color} p-6 shadow-lg hover:shadow-2xl transition-all duration-300`}
+                className={`relative overflow-hidden mx-auto rounded-2xl w-4/4 bg-gradient-to-br ${certification.color} p-3 sm:p-5 shadow-lg hover:shadow-2xl transition-all duration-300`}
             >
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10">

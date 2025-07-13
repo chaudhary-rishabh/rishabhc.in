@@ -16,13 +16,13 @@ export default function Document() {
         <meta property="og:description" content="Explore the portfolio and expertise of Rishabh Chaudhary, a highly motivated software developer specializing in modern technologies and cloud DevOps solutions." />
         <meta property="og:url" content="https://rishabhc.dev" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://rishabhc.dev/assets/og-image.jpg" /> {/* Update the URL with your actual image */}
+        <meta property="og:image" content="https://rishabhc.dev/assets/og-image.jpg" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rishabh Chaudhary | Full-Stack Developer & DevOps Expert" />
         <meta name="twitter:description" content="Discover Rishabh's expertise in full-stack development, DevOps, and cutting-edge technologies like AWS Cloud, Docker, Kubernetes, and more." />
-        <meta name="twitter:image" content="https://rishabhc.dev/assets/twitter-image.jpg" /> {/* Update the URL with your actual image */}
+        <meta name="twitter:image" content="https://rishabhc.dev/assets/twitter-image.jpg" />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
@@ -34,9 +34,9 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Google Fonts */}
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
+        {/* Google Fonts - Removed Lora since it's handled by next/font/google */}
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
 
       </Head>
       <body>

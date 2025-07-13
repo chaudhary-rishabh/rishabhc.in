@@ -7,7 +7,7 @@ import {
     User,
     Code,
     Award,
-    GitForkIcon as Github,
+    Github,
     Linkedin,
     ExternalLink,
     ArrowRight,
@@ -16,18 +16,17 @@ import {
     ShoppingCart,
     Database,
     Smartphone,
-    Zap,
     Users,
     Briefcase,
 } from "lucide-react"
 import HorizontalCarousel from "./carousel/horizontal-carousel"
 import ContactForm from "./contact/ContactForm"
 import CertificationSection from "./certification/CertificationSection"
-import ModernCarousel from "./carousel/modern-carousel"
 import BubbleExperience from "./experience/BubbleExperience"
 import Profile from "./profile/profile"
 import Image from "next/image"
 import EnhancedSkillsSection from "./profile/enhanced-skills-section"
+import SectionSeparator from "./section-separator"
 
 // Enhanced sections with multiple projects
 const sections = [
@@ -45,8 +44,8 @@ const sections = [
                 description:
                     "A comprehensive e-learning platform with user authentication, course management, and payment integration",
                 image: "/rishabh-project-two.png",
-                github:"github.com/chaudhary-rishabh/sakmap",
-                preview:"https://sakmap.com/",
+                github: "github.com/chaudhary-rishabh/sakmap",
+                preview: "https://sakmap.com/",
                 features: [
                     "User Authentication & Profiles",
                     "Course Management System",
@@ -64,7 +63,7 @@ const sections = [
                 id: 2,
                 name: "E-Commerce Dashboard",
                 tech: "React, Tailwind, Node.js",
-                description: "Modern  e-commerce management with real-time analytics and inventory control",
+                description: "Modern e-commerce management with real-time analytics and inventory control",
                 image: "/rishabh-project-one.png",
                 github: "github.com/chaudhary-rishabh/yogice",
                 preview: "https://yogice.in/",
@@ -95,18 +94,19 @@ const sections = [
             },
             {
                 id: 4,
-                name: "Task Management App",
+                name: "Analytics Dashboard",
                 tech: "React Native, Firebase, Redux",
-                description:
-                    "Cross-platform mobile app for team collaboration and project management with offline capabilities",
+                description: "Real-time analytics dashboard with data visualization and reporting capabilities",
                 image: "/rishabh-project-one.png",
-                features: ["Cross-platform Mobile App", "Offline Synchronization", "Team Collaboration", "Project Templates"],
+                github: "github.com/chaudhary-rishabh/sakmap",
+                preview: "https://sakmap.com/",
+                features: ["Real-time Data Visualization", "Custom Reports", "Export Functionality", "Multi-tenant Support"],
                 testimonial: {
-                    text: "The app has transformed how our team manages projects. Clean interface, robust functionality, and excellent performance across all devices.",
-                    author: "Lisa Rodriguez",
-                    role: "Team Lead at StartupHub",
+                    text: "The analytics dashboard provides incredible insights into our business metrics. The visualizations are clear and actionable.",
+                    author: "Alex Thompson",
+                    role: "Data Analyst at TechCorp",
                 },
-                icon: Smartphone,
+                icon: Database,
             },
         ],
     },
@@ -116,50 +116,7 @@ const sections = [
         icon: Code,
         title: "Problem-Solving Specialist",
         subtitle: "Mastering cutting-edge technologies and frameworks",
-        projects: [
-            {
-                id: 1,
-                name: "Full-Stack Development",
-                tech: "React, Node.js, PostgreSQL",
-                description: "Comprehensive web application development using modern JavaScript frameworks and databases",
-                image: "/api/placeholder/600/400",
-                features: ["React & Next.js Development", "RESTful API Design", "Database Optimization", "Cloud Deployment"],
-                testimonial: {
-                    text: "Impressive depth of knowledge across the full stack. The ability to adapt to new technologies quickly and implement best practices consistently is remarkable.",
-                    author: "Michael Chen",
-                    role: "Tech Lead at InnovateLab",
-                },
-                icon: Code,
-            },
-            {
-                id: 2,
-                name: "Cloud Architecture",
-                tech: "AWS, Docker, Kubernetes",
-                description: "Scalable cloud solutions with containerization and microservices architecture",
-                image: "/api/placeholder/600/400",
-                features: ["AWS Services Integration", "Container Orchestration", "Microservices Design", "CI/CD Pipeline"],
-                testimonial: {
-                    text: "Expert-level cloud architecture skills. The solutions are always scalable, secure, and perfectly suited for our growing business needs.",
-                    author: "Jennifer Park",
-                    role: "CTO at CloudVenture",
-                },
-                icon: Database,
-            },
-            {
-                id: 3,
-                name: "Performance Optimization",
-                tech: "Webpack, Lighthouse, CDN",
-                description: "Web performance optimization and speed enhancement techniques for better user experience",
-                image: "/api/placeholder/600/400",
-                features: ["Bundle Optimization", "Performance Monitoring", "CDN Implementation", "Core Web Vitals"],
-                testimonial: {
-                    text: "Exceptional performance optimization skills. Our website speed improved by 300% and user engagement increased significantly.",
-                    author: "David Kim",
-                    role: "Marketing Director at SpeedTech",
-                },
-                icon: Zap,
-            },
-        ],
+        projects: [],
     },
     {
         id: "certification",
@@ -207,20 +164,13 @@ export default function PortfolioLanding() {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
     const [isScrolled, setIsScrolled] = useState(false)
 
-    // Refs for smooth scrolling
-    const carouselRef = useRef<HTMLDivElement>(null)
-    const contentRef = useRef<HTMLDivElement>(null)
-    const portfolioRef = useRef<HTMLDivElement>(null)
-    const skillsRef = useRef<HTMLDivElement>(null)
-    const certificationRef = useRef<HTMLDivElement>(null)
-    const experienceRef = useRef<HTMLDivElement>(null)
-
+    // Refs for the main container
+    const mainContainerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50)
         }
-
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
@@ -239,151 +189,131 @@ export default function PortfolioLanding() {
     // Reset project index when switching sections
     useEffect(() => {
         setCurrentProjectIndex(0)
+        // Reset scroll position of main container when switching sections
+        if (mainContainerRef.current) {
+            mainContainerRef.current.scrollTop = 0
+        }
     }, [activeSection])
 
-    // Smooth scroll function
-    const scrollToSection = (sectionId: string) => {
-        setActiveSection(sectionId);
+    const handleSectionChange = (sectionId: string) => {
+        setActiveSection(sectionId)
+    }
 
-        const refs = {
-            portfolio: portfolioRef,
-            skills: skillsRef,
-            certification: certificationRef,
-            experience: experienceRef,
-        }
+    const [hasMounted, setHasMounted] = useState(false)
+    useEffect(() => setHasMounted(true), [])
+    if (!hasMounted) return null
 
-        const targetRef = refs[sectionId as keyof typeof refs];
+    const renderPortfolioContent = () => {
+        if (!currentProject) return null
 
-        // Delay scrolling to ensure section content is rendered
-        setTimeout(() => {
-            if (targetRef?.current) {
-                targetRef.current.scrollIntoView({
-                    behavior: "smooth",
-                    block: window.innerWidth <= 640 ? "start" : "center",
-                });
-            }
-        }, 100); // delay by 100ms to allow DOM updates
-    };
-    
-    
-    const [hasMounted, setHasMounted] = useState(false);
-    useEffect(() => setHasMounted(true), []);
-    if (!hasMounted) return null;
+        return (
+            <div className="space-y-6">
+                {/* Project Image */}
+                <motion.div
+                    className="w-full h-64 sm:h-80 rounded-3xl bg-gradient-to-br from-white to-white shadow-2xl shadow-orange-200/60 flex items-center justify-center overflow-hidden"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <div className="w-full h-full border border-orange-500 rounded-3xl bg-white/10 backdrop-blur-xs overflow-hidden">
+                        <Image
+                            src={currentProject.image || "/placeholder.svg"}
+                            height={600}
+                            width={600}
+                            alt={currentProject.name}
+                            className="w-full h-full object-cover rounded-3xl"
+                        />
+                    </div>
+                </motion.div>
 
-    const renderSectionContent = (sectionId: string, projectIndex?: number) => {
-        switch (sectionId) {
-            case "skills":
-                return <Profile />;
-            case "certification":
-                return <CertificationSection />;
-            case "experience":
-                return <BubbleExperience />;
-            default:
-                const currentSection = sections.find((section) => section.id === sectionId);
-                // const currentProject = currentSection?.projects?.[0];
-                const currentProject = currentSection?.projects?.[projectIndex ?? 0];
-                return currentProject ? (
-                    <motion.div
-                        className="relative order-1 lg:order-2"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                        {/* White Container - Only this part changes */}
-                        <div className="bg-white p-5 shadow-lg shadow-orange-200 rounded-3xl">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={currentProject.id}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
-                                    transition={{ duration: 0.4 }}
-                                >
-                                    <div className="mb-6 sm:mb-4">
-                                        <div
-                                            className="w-full h-64 rounded-3xl bg-gradient-to-br from-white to-white shadow-2xl shadow-orange-200/60 mb-6 flex items-center justify-center"
-                                        >
-                                            {/* image here */}
-                                            <div className="w-full h-full border border-orange-500 rounded-3xl bg-white/10 backdrop-blur-xs">
-                                                <Image
-                                                    src={currentProject.image}
-                                                    height={600}
-                                                    width={600}
-                                                    alt="Rishabh Profile"
-                                                    className="w-full h-full mx-auto rounded-3xl object-cover"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="text-gray-600 gap-5 flex flex-row text-sm sm:text-base font-medium">
-                                            <div className="flex flex-col text-sm sm:text-base font-medium">
-                                                <div className="text-gray-700 flex flex-row text-sm sm:text-base font-medium mb-4">
-                                                    {currentProject.name}
-                                                </div>
-                                                <div className="text-orange-600 flex flex-row text-sm sm:text-base font-medium mb-4">
-                                                    {currentProject.tech}
-                                                </div>
-                                            </div>
-                                            <span className="">
-                                                <motion.a
-                                                    key={1}
-                                                    href={"#"}
-                                                    className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center group relative p-4 bg-white cursor-pointer rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 border border-orange-100/50"
-                                                    whileHover={{ scale: 1.1, y: -4 }}
-                                                    whileTap={{ scale: 0.95 }}
-                                                >
-                                                    <ExternalLink className="w-5 h-5 text-gray-700 group-hover:text-orange-500 transition-colors" />
-                                                    <a href={currentProject.preview} target="_blank" className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-orange-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></a>
-                                                </motion.a>
-                                            </span>
-                                            <span className="">
-                                                <motion.a
-                                                    key={1}
-                                                    href={"#"}
-                                                    className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center group relative p-4 bg-white cursor-pointer rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 border border-orange-100/50"
-                                                    whileHover={{ scale: 1.1, y: -4 }}
-                                                    whileTap={{ scale: 0.95 }}
-                                                >
-                                                    <Github className="w-5 h-5 text-gray-700 group-hover:text-orange-500 transition-colors" />
-                                                    <a href={currentProject.github} target="_blank" className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-orange-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></a>
-                                                </motion.a>
-                                            </span>
-                                        </div>
-                                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{currentProject.description}</p>
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
+                {/* Project Info */}
+                <div className="space-y-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div className="space-y-2">
+                            <h3 className="text-xl sm:text-2xl font-bold text-gray-800">{currentProject.name}</h3>
+                            <p className="text-orange-600 font-medium">{currentProject.tech}</p>
                         </div>
 
-                        {/* Navigation Buttons for Portfolio */}
-                        {currentSection.projects.length > 1 && (
-                            <>
-                                {/* Previous Project Button */}
-                                <motion.div
-                                    className="absolute bottom-3 -right-2  w-14 h-14 bg-white rounded-full shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/80 flex items-center justify-center group cursor-pointer animate-pulse outline-double outline-orange-700 hover:animate-pulse"
-                                    whileTap={{ scale: 0.9 }}
-                                    onClick={handlePrevProject}
-                                    initial={{ opacity: 0, scale: 0 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 1, duration: 0.5, type: "spring" }}
-                                >
-                                    <ChevronUp className="w-12 h-12 text-orange-500 transition-colors" />
-                                </motion.div>
+                        <div className="flex gap-3">
+                            <motion.a
+                                href={currentProject.preview}
+                                target="_blank"
+                                className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center group relative bg-white cursor-pointer rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 border border-orange-100/50"
+                                whileHover={{ scale: 1.1, y: -4 }}
+                                whileTap={{ scale: 0.95 }}
+                                rel="noreferrer"
+                            >
+                                <ExternalLink className="w-5 h-5 text-gray-700 group-hover:text-orange-500 transition-colors" />
+                            </motion.a>
 
-                                {/* Next Project Button */}
-                                <motion.div
-                                    className="absolute -bottom-12 -right-2 w-14 h-14 bg-white rounded-full shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/80 flex items-center justify-center group cursor-pointer animate-pulse outline-double outline-orange-700 hover:animate-pulse"
-                                    whileTap={{ scale: 0.9 }}
-                                    onClick={handleNextProject}
-                                    initial={{ opacity: 0, scale: 0 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 1, duration: 0.5, type: "spring" }}
-                                >
-                                    <ChevronDown className="w-12 h-12 text-orange-500 transition-colors" />
-                                </motion.div>
-                            </>
-                        )}
-                    </motion.div>
-                ) : null
+                            <motion.a
+                                href={`https://${currentProject.github}`}
+                                target="_blank"
+                                className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center group relative bg-white cursor-pointer rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 border border-orange-100/50"
+                                whileHover={{ scale: 1.1, y: -4 }}
+                                whileTap={{ scale: 0.95 }}
+                                rel="noreferrer"
+                            >
+                                <Github className="w-5 h-5 text-gray-700 group-hover:text-orange-500 transition-colors" />
+                            </motion.a>
+                        </div>
+                    </div>
+
+                    <p className="text-gray-600 leading-relaxed">{currentProject.description}</p>
+
+                    {/* Features */}
+                    {currentProject.features && (
+                        <div className="space-y-3">
+                            <h4 className="font-semibold text-gray-800">Key Features:</h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                {currentProject.features.map((feature, index) => (
+                                    <motion.div
+                                        key={index}
+                                        className="flex items-center gap-2 text-sm text-gray-600"
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: index * 0.1 }}
+                                    >
+                                        <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
+                                        {feature}
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Testimonial */}
+                    {currentProject.testimonial && (
+                        <motion.div
+                            className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-2xl border border-orange-200/50"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                        >
+                            <p className="text-gray-700 italic mb-3">"{currentProject.testimonial.text}"</p>
+                            <div className="text-sm">
+                                <p className="font-semibold text-gray-800">{currentProject.testimonial.author}</p>
+                                <p className="text-gray-600">{currentProject.testimonial.role}</p>
+                            </div>
+                        </motion.div>
+                    )}
+                </div>
+            </div>
+        )
+    }
+
+    const renderSectionContent = () => {
+        switch (activeSection) {
+            case "portfolio":
+                return renderPortfolioContent()
+            case "skills":
+                return <Profile />
+            case "certification":
+                return <CertificationSection />
+            case "experience":
+                return <BubbleExperience />
+            default:
+                return renderPortfolioContent()
         }
     }
 
@@ -391,15 +321,97 @@ export default function PortfolioLanding() {
         <div className="min-h-screen bg-gradient-to-br from-orange-400/50 via-white to-orange-200/90 font-sans">
             {/* Main Content */}
             <main className="container mx-auto px-4 sm:px-6 relative z-10">
-                {/* landing main page */}
+                {/* Landing main page */}
                 <LandingImage />
 
                 {/* Horizontal Carousel Auto */}
                 <HorizontalCarousel />
+                <SectionSeparator />
+
+                {/* Main Content Container */}
+                <div className="flex justify-center items-start min-h-screen py-16">
+                    <div className="w-full max-w-4xl mx-auto relative">
+                        {/* Main White Container */}
+                        <motion.div
+                            className="bg-white/95 backdrop-blur-sm rounded-3xl sm:w-3/4 w-full mx-auto shadow-2xl shadow-orange-500/20 border border-orange-200/50 overflow-hidden py-4"
+                            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        >
+                            {/* Scrollable Content Area */}
+                            <div
+                                ref={mainContainerRef}
+                                className="h-[600px] sm:h-[700px] overflow-y-auto scrollbar-thin scrollbar-thumb-orange-300 scrollbar-track-orange-100 p-6"
+                                style={{
+                                    scrollbarWidth: "thin",
+                                    scrollbarColor: "#fb923c #fed7aa",
+                                }}
+                            >
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={activeSection}
+                                        initial={{ opacity: 0, y: 30 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -30 }}
+                                        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                                        className="h-full"
+                                    >
+                                        {renderSectionContent()}
+                                    </motion.div>
+                                </AnimatePresence>
+                            </div>
+
+                            {/* Project Navigation for Portfolio */}
+                            {activeSection === "portfolio" && currentSection.projects.length > 1 && (
+                                <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between pointer-events-none">
+                                    <motion.button
+                                        onClick={handlePrevProject}
+                                        className="w-12 h-12 bg-white rounded-full shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/40 flex items-center justify-center group cursor-pointer pointer-events-auto border border-orange-200/50"
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 1, duration: 0.5 }}
+                                    >
+                                        <ChevronUp className="w-6 h-6 text-orange-500 rotate-90" />
+                                    </motion.button>
+
+                                    <motion.button
+                                        onClick={handleNextProject}
+                                        className="w-12 h-12 bg-white rounded-full shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/40 flex items-center justify-center group cursor-pointer pointer-events-auto border border-orange-200/50"
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 1, duration: 0.5 }}
+                                    >
+                                        <ChevronDown className="w-6 h-6 text-orange-500 rotate-90" />
+                                    </motion.button>
+                                </div>
+                            )}
+
+                            {/* Project Indicators for Portfolio */}
+                            {activeSection === "portfolio" && currentSection.projects.length > 1 && (
+                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                                    {currentSection.projects.map((_, index) => (
+                                        <motion.button
+                                            key={index}
+                                            onClick={() => setCurrentProjectIndex(index)}
+                                            className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentProjectIndex ? "bg-orange-500 w-6" : "bg-orange-300 hover:bg-orange-400"
+                                                }`}
+                                            whileHover={{ scale: 1.2 }}
+                                            whileTap={{ scale: 0.9 }}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </motion.div>
+                    </div>
+                </div>
 
                 {/* Navigation Tabs */}
                 <motion.div
-                    className="fixed -bottom-8 left-1/2 -translate-x-1/2 w-[90%] sm:w-[60%] max-w-5xl flex shadow-2xl shadow-orange-500/60 bg-white/20 backdrop-blur-sm py-3 rounded-3xl justify-around sm:gap-4 mb-12 sm:mb-16 z-50"
+                    className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] sm:w-[50%] max-w-5xl flex shadow-2xl shadow-orange-500/60 bg-white/20 backdrop-blur-sm py-3 rounded-3xl justify-around sm:gap-4 z-50"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
@@ -408,15 +420,14 @@ export default function PortfolioLanding() {
                     {sections.map((section) => {
                         const Icon = section.icon
                         const isActive = activeSection === section.id
-
                         return (
                             <motion.button
                                 key={section.id}
                                 variants={itemVariants}
-                                onClick={() => scrollToSection(section.id)}
+                                onClick={() => handleSectionChange(section.id)}
                                 className={`
-                                    group relative outline-none flex flex-col sm:flex-row items-center justify-center sm:space-x-3 px-4 sm:px-8 py-3 sm:py-2 
-                                    rounded-3xl transition-all duration-300 font-semibold text-sm sm:text-base overflow-hidden
+                                    group relative outline-none flex flex-col sm:flex-row items-center justify-center sm:space-x-3 px-4 sm:px-8 py-3 sm:py-2
+                                     rounded-3xl transition-all duration-300 font-semibold text-sm sm:text-base overflow-hidden
                                     ${isActive
                                         ? "bg-orange-200 text-gray-900 shadow-2xl shadow-gray-500/60 scale-105"
                                         : "bg-white/90 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 shadow-orange-500/10 hover:scale-105"
@@ -449,77 +460,16 @@ export default function PortfolioLanding() {
                     })}
                 </motion.div>
 
-                {/* Content Sections */}
-                <div ref={contentRef} className="space-y-32 py-16">
-                    {/* Portfolio Section */}
-                    <div ref={portfolioRef} className="min-h-screen flex items-center justify-center">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key="portfolio"
-                                    initial={{ opacity: 0, y: 40 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -40 }}
-                                    transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                                    className="flex justify-center w-full sm:w-2/5 mx-auto items-center"
-                                >
-                                {renderSectionContent("portfolio", currentProjectIndex)}
-                                </motion.div>
-                            </AnimatePresence>
-                    </div>
+                <SectionSeparator />
 
-                    {/* Skills Section */}
-                    <div ref={skillsRef} className="min-h-screen flex items-center justify-center">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key="skills"
-                                    initial={{ opacity: 0, y: 40 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -40 }}
-                                    transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                                    className="flex justify-center w-full sm:w-2/5 mx-auto items-center"
-                                >
-                                    {renderSectionContent("skills")}
-                                </motion.div>
-                            </AnimatePresence>
-                    </div>
-
-                    {/* Certification Section */}
-                    <div ref={certificationRef} className="min-h-screen flex items-center justify-center">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key="certification"
-                                    initial={{ opacity: 0, y: 40 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -40 }}
-                                    transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                                    className="w-full"
-                                >
-                                {renderSectionContent("certification")}
-                                </motion.div>
-                            </AnimatePresence>
-                    </div>
-
-                    {/* Experience Section */}
-                    <div ref={experienceRef} className="min-h-screen flex items-center justify-center">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key="experience"
-                                    initial={{ opacity: 0, y: 40 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -40 }}
-                                    transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                                    className="w-full"
-                                >
-                                    {renderSectionContent("experience")}
-                                </motion.div>
-                            </AnimatePresence>
-                    </div>
-                </div>
+                {/* Enhanced Skills Section */}
                 <EnhancedSkillsSection />
+                <SectionSeparator />
 
+                {/* Contact Section */}
                 <ContactForm />
 
-                {/* socials */}
+                {/* Socials */}
                 <motion.div className="pt-6 mx-auto flex justify-center" variants={itemVariants}>
                     <div className="flex space-x-4">
                         {[
@@ -557,7 +507,6 @@ export default function PortfolioLanding() {
                             extraordinary together?
                         </span>
                     </h3>
-
                     <div className="flex flex-col mb-32 sm:flex-row gap-4 sm:gap-6 justify-center items-center max-w-md mx-auto">
                         <motion.button
                             className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 relative overflow-hidden group"
@@ -570,7 +519,6 @@ export default function PortfolioLanding() {
                             </span>
                             <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </motion.button>
-
                         <motion.button
                             className="w-full sm:w-auto border-2 border-orange-200 text-gray-700 px-8 py-4 rounded-2xl font-semibold hover:border-orange-300 hover:shadow-xl hover:bg-orange-50 transition-all duration-300 backdrop-blur-sm"
                             whileHover={{ scale: 1.05, y: -2 }}

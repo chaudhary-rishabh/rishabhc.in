@@ -108,11 +108,11 @@ export default function BubbleExperience() {
     if (!hasMounted) return null
 
     return (
-        <div className="w-full max-w-md mx-auto p-4">
+        <div className="w-full mx-auto p-4">
             {/* Main Experience Card */}
             <motion.div ref={containerRef} style={{ x, scale: cardScale, rotateY: cardRotate }} className="relative mb-8">
                 <div
-                    className={`relative overflow-hidden b rounded-3xl bg-gradient-to-br ${currentExperience.color} p-6 shadow-2xl`}
+                    className={`relative overflow-hidden w-full rounded-3xl bg-gradient-to-br ${currentExperience.color} p-6 shadow-2xl`}
                 >
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-10">
@@ -129,7 +129,7 @@ export default function BubbleExperience() {
                             className="relative z-10"
                         >
                             {/* Main Content Card */}
-                            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-5 mb-4 shadow-lg">
+                            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-5 mb-4 shadow-lg">
                                 <div className="flex items-start justify-between mb-3">
                                     <div>
                                         <h3 className="font-bold text-gray-900 text-lg leading-tight">{currentExperience.company}</h3>

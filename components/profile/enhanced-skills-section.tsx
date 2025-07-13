@@ -58,7 +58,7 @@ export default function EnhancedSkillsSection() {
     }, [])
 
     return (
-        <div className="px-2 py-1 z-30">
+        <div className="px-2 py-1 z-30 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] mx-auto relative">
             <motion.div
                 key={`skills-${animationKey}`}
                 className="relative"

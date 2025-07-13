@@ -18,9 +18,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background:  #9cd2f8;
-  font-family: 'lora', sans-serif;
+  background: #9cd2f8;
   background-color: #e8f4ff;
+}
+
+/* Force Lora font on all elements */
+* {
+  font-family: var(--font-lora), serif !important;
 }
 
 @layer utilities {
@@ -60,7 +64,7 @@ body {
   font-size: 11px;
 }
 .btn-header{
-  font-family: 'merriweather', sans-serif;
+  font-family: 'Lora', serif;
   font-weight: 400;
   /* text-shadow: 2px 2px 10px rgba(233, 226, 226, 0.934); */
   font-weight: 900;

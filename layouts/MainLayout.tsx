@@ -1,4 +1,4 @@
-// layouts/Layout.tsx
+// layouts/MainLayout.tsx
 import React, { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';

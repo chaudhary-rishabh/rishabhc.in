@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import MainLayout from "@/layouts/MainLayout";
 import Head from "next/head";
 import PortfolioLanding from "@/components/PortfolioLanding";
+import AestheticLayout from "@/components/aesthetic-layout";
 
 
 export default function Home() {
@@ -15,11 +16,13 @@ export default function Home() {
         />
         <link rel="canonical" href="https://rishabhc.dev" />
       </Head>
-      <MainLayout>
-        <div className="flex flex-col min-h-screen">
+      <AestheticLayout>
+        <MainLayout>
+          <div className="flex flex-col min-h-screen">
             <PortfolioLanding />
-        </div>
-      </MainLayout>
+          </div>
+        </MainLayout>
+      </AestheticLayout>
     </>
   );
 }

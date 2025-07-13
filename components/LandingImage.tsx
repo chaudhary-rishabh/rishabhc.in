@@ -7,8 +7,8 @@ import Image from "next/image"
 import {
     Sparkles,
 } from "lucide-react"
-import EnhancedSkillsSection from "./profile/enhanced-skills-section"
 import SkillsText from "./SkillsText"
+import StickyNavigation from "./sticky-navigation"
 const skills = [
     { name: "AWS", icon: Cloud, color: "bg-orange-500" },
     // { name: "MERN Stack", icon: Code, color: "bg-green-500" },
@@ -62,6 +62,7 @@ export default function LandingImage() {
                     <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-100 to-orange-50 px-4 py-2 rounded-2xl border border-orange-200/50 mb-8">
                         <Sparkles className="w-4 h-4 text-orange-500" />
                         <span className="text-orange-600 font-medium text-sm sm:text-md">Hi, I&#39;m Rishabh | Full Stack Engineer</span>
+                        <StickyNavigation></StickyNavigation>
                     </div>
                 </motion.div>
                 {/* Sparkle decorations */}
@@ -116,7 +117,7 @@ export default function LandingImage() {
                 <motion.div
                     key={`center-${animationKey}`}
                     style={{ borderRadius: "40px" }}
-                    className="absolute shadow-2xl mb-40 shadow-orange-500/60 rounded-3xl top-6/12 left-6/12 lg:top-8/12 lg:left-8/12 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-xs"
+                    className="absolute shadow-2xl mb-40 shadow-orange-500/50 rounded-3xl top-6/12 left-6/12 lg:top-8/12 lg:left-8/12 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-xs"
                     initial={{
                         opacity: 0,
                         filter: "blur(4px)",
@@ -180,7 +181,7 @@ export default function LandingImage() {
                     }}
                 >
                     <motion.div
-                        className="bg-white/95 mb-[530px] sm:mb-96 sm:ml-14 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
+                        className="bg-white/95 mb-[530px] sm:mb-96 sm:ml-36 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
                         animate={{
                             y: [0, -8, 0],
                             boxShadow: [
@@ -241,7 +242,7 @@ export default function LandingImage() {
                     }}
                 >
                     <motion.div
-                        className="bg-white/95 mt-[380px] sm:mt-96 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
+                        className="bg-white/95 mt-[380px] sm:mt-[440px] sm:mr-20 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
                         animate={{
                             y: [0, -6, 0],
                             boxShadow: [
@@ -270,13 +271,13 @@ export default function LandingImage() {
                         }}
                     >
                         <div className="flex items-center gap-2 mb-1 md:mb-2">
-                            <div className="p-1 md:p-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-md md:rounded-lg">
-                                <Globe className="w-3 h-3 md:w-5 md:h-5 text-white" />
+                            <div className="p-1 md:p-2 bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-md md:rounded-lg">
+                                <Layers className="w-3 h-3 md:w-5 md:h-5 text-white" />
                             </div>
-                            <div className="w-1 h-1 md:w-2 md:h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                            <div className="w-1 h-1 md:w-2 md:h-2 bg-green-400 rounded-full animate-pulse"></div>
                         </div>
                         <p className="text-gray-800 font-medium text-xs md:text-sm leading-relaxed">
-                            Versatile Full Stack Developer with end-to-end expertise
+                            Versatile Full Stack Developer
                         </p>
                     </motion.div>
                 </motion.div>
