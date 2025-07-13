@@ -12,7 +12,7 @@ export default function AestheticLayout({ children, className = "" }: AestheticL
     return (
         <div className={`w-full min-h-screen relative overflow-hidden ${className}`}>
             {/* Left side lines */}
-            <div className="fixed left-80 top-0 h-full w-8 z-10 pointer-events-none">
+            <div className="fixed left-80 hidden sm:block top-0 h-full w-8 z-10 pointer-events-none">
                 {/* Main vertical line */}
                 <motion.div
                     className="absolute left-4 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-orange-400 to-transparent"
@@ -35,7 +35,7 @@ export default function AestheticLayout({ children, className = "" }: AestheticL
             </div>
 
             {/* Right side lines */}
-            <div className="fixed right-80 top-0 h-full w-8 z-10 pointer-events-none">
+            <div className="fixed right-80 hidden sm:block top-0 h-full w-8 z-10 pointer-events-none">
                 {/* Main vertical line */}
                 <motion.div
                     className="absolute right-4 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-orange-400 to-transparent"

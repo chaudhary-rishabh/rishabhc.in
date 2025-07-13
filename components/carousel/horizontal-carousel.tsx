@@ -124,7 +124,7 @@ export default function HorizontalCarousel() {
                     }`}
             >
                 <div className="flex items-center justify-center w-full h-full">
-                    <ChevronLeft className={`w-6 h-6 ${canScrollLeft ? "text-black" : "text-gray-400"}`} />
+                    <ChevronLeft className={`w-6 h-6 ${canScrollLeft ? "text-white" : "text-gray-400"}`} />
                 </div>
 
                 {/* Glowing background effect */}

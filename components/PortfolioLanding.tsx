@@ -282,21 +282,6 @@ export default function PortfolioLanding() {
                         </div>
                     )}
 
-                    {/* Testimonial */}
-                    {currentProject.testimonial && (
-                        <motion.div
-                            className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-2xl border border-orange-200/50"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3 }}
-                        >
-                            <p className="text-gray-700 italic mb-3">{currentProject.testimonial.text}</p>
-                            <div className="text-sm">
-                                <p className="font-semibold text-gray-800">{currentProject.testimonial.author}</p>
-                                <p className="text-gray-600">{currentProject.testimonial.role}</p>
-                            </div>
-                        </motion.div>
-                    )}
                 </div>
             </div>
         )
@@ -373,7 +358,7 @@ export default function PortfolioLanding() {
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 1, duration: 0.5 }}
                                     >
-                                        <ChevronUp className="w-6 h-6 text-orange-500 rotate-90" />
+                                        <ChevronDown className="w-6 h-6 text-orange-500 rotate-90" />
                                     </motion.button>
 
                                     <motion.button
@@ -385,7 +370,7 @@ export default function PortfolioLanding() {
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 1, duration: 0.5 }}
                                     >
-                                        <ChevronDown className="w-6 h-6 text-orange-500 rotate-90" />
+                                        <ChevronUp className="w-6 h-6 text-orange-500 rotate-90" />
                                     </motion.button>
                                 </div>
                             )}
