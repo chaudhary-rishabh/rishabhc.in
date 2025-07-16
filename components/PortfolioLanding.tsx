@@ -309,7 +309,7 @@ export default function PortfolioLanding() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-400/50 via-white to-orange-200/90 font-sans">
+        <div className="min-h-screen bg-gradient-to-br from-orange-300/50 via-orange-50 to-orange-200/90 font-sans">
             {/* Main Content */}
             <main className="container mx-auto px-4 sm:px-6 relative z-10">
                 {/* Landing main page */}

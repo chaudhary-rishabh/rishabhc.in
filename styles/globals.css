@@ -18,8 +18,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #9cd2f8;
-  background-color: #e8f4ff;
+  background: #ffffff;
+  background-color: #ffddb9;
 }
 
 /* Force Lora font on all elements */
