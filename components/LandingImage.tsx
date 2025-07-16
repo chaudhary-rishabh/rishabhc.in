@@ -13,7 +13,7 @@ const skills = [
     { name: "AWS", icon: Cloud, color: "bg-orange-500" },
     // { name: "MERN Stack", icon: Code, color: "bg-green-500" },
     { name: "DevOps", icon: Server, color: "bg-blue-500" },
-    // { name: "Full Stack", icon: Layers, color: "bg-purple-500" },
+    { name: "Full Stack", icon: Layers, color: "bg-purple-500" },
 ]
 
 const sparkles = [
@@ -62,7 +62,7 @@ export default function LandingImage() {
                     <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-100 to-orange-50 px-4 py-2 rounded-2xl border border-orange-200/50 mb-8">
                         <Sparkles className="w-4 h-4 text-orange-500" />
                         <span className="text-orange-600 font-medium text-sm sm:text-md">Hi, I&#39;m Rishabh | Full Stack Engineer</span>
-                        <StickyNavigation></StickyNavigation>
+                        {/* <StickyNavigation></StickyNavigation> */}
                     </div>
                 </motion.div>
                 {/* Sparkle decorations */}
