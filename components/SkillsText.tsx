@@ -34,10 +34,10 @@ const SkillsText = () => {
 
     return (
         <>
-            <div className="mx-auto w-full -mt-32 max-w-xl">
+            <div className="mx-auto w-full -mt-52 max-w-xl">
                 <HorizontalSlider skills={technicalSkillsSoftware} direction="right" />
             </div>
-            <div className="mx-auto w-full max-w-xl mt-4">
+            <div className="mx-auto w-full max-w-xl mt-2">
                 <HorizontalSlider skills={technicalSkillsDevopsCloud} direction="left" />
             </div>
         </>

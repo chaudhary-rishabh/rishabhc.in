@@ -7,17 +7,17 @@ import { ChevronRight } from "lucide-react"
 const skillCategories = [
     {
         title: "Design",
-        skills: ["figma", "framer"],
+        skills: ["Figma", "Eraser", "Swagger"],
         delay: 0,
     },
     {
         title: "Develop",
-        skills: ["MERN", "PERN", "Nextjs"],
+        skills: ["MERN", "PERN", "Redux", "Zustand", "Next.js"],
         delay: 2,
     },
     {
         title: "Deploy",
-        skills: ["k8s", "aws", "vercel", "docker", "render"],
+        skills: ["K8S", "AWS", "Vercel", "Docker", "CI|CD"],
         delay: 4,
     },
 ]
@@ -58,7 +58,7 @@ export default function EnhancedSkillsSection() {
     }, [])
 
     return (
-        <div className="px-2 py-1 z-30 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] mx-auto relative">
+        <div className="px-2 py-1 z-30 w-[100%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] mx-auto relative">
             <motion.div
                 key={`skills-${animationKey}`}
                 className="relative"

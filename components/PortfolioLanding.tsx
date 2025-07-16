@@ -40,7 +40,7 @@ const sections = [
             {
                 id: 1,
                 name: "Course Selling Platform",
-                tech: "Supabase, Next.js, Tailwind CSS",
+                tech: "Supabase, Next.js, Tailwind",
                 description:
                     "A comprehensive e-learning platform with user authentication, course management, and payment integration",
                 image: "/rishabh-project-two.png",
@@ -197,6 +197,11 @@ export default function PortfolioLanding() {
 
     const handleSectionChange = (sectionId: string) => {
         setActiveSection(sectionId)
+
+        // Scroll the main content into view smoothly
+        if (mainContainerRef.current) {
+            mainContainerRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+        }
     }
 
     const [hasMounted, setHasMounted] = useState(false)
@@ -228,10 +233,10 @@ export default function PortfolioLanding() {
 
                 {/* Project Info */}
                 <div className="space-y-4">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div className="flex sm:flex-row sm:items-center sm:justify-between gap-4">
                         <div className="space-y-2">
-                            <h3 className="text-xl sm:text-2xl font-bold text-gray-800">{currentProject.name}</h3>
-                            <p className="text-orange-600 font-medium">{currentProject.tech}</p>
+                            <h3 className="text-sm sm:text-2xl font-bold text-gray-800">{currentProject.name}</h3>
+                            <p className="text-orange-600 text-xs sm:text-xl font-medium">{currentProject.tech}</p>
                         </div>
 
                         <div className="flex gap-3">
@@ -348,10 +353,10 @@ export default function PortfolioLanding() {
 
                             {/* Project Navigation for Portfolio */}
                             {activeSection === "portfolio" && currentSection.projects.length > 1 && (
-                                <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 flex justify-between pointer-events-none">
+                                <div className="absolute top-2/3 -translate-y-1/2 left-4 right-4 flex justify-between pointer-events-none">
                                     <motion.button
                                         onClick={handlePrevProject}
-                                        className="w-12 h-12 bg-white rounded-full shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/40 flex items-center justify-center group cursor-pointer pointer-events-auto border border-orange-200/50"
+                                        className="w-12 h-12 bg-white/60 backdrop-blur-none rounded-full shadow-lg shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/40 flex items-center justify-center group cursor-pointer pointer-events-auto border border-orange-200/50"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
                                         initial={{ opacity: 0, x: -20 }}
@@ -363,7 +368,7 @@ export default function PortfolioLanding() {
 
                                     <motion.button
                                         onClick={handleNextProject}
-                                        className="w-12 h-12 bg-white rounded-full shadow-lg shadow-orange-500/20 hover:shadow-2xl hover:shadow-orange-500/40 flex items-center justify-center group cursor-pointer pointer-events-auto border border-orange-200/50"
+                                        className="w-12 h-12 bg-white/50 backdrop-blur-none rounded-full shadow-lg shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/40 flex items-center justify-center group cursor-pointer pointer-events-auto border border-orange-200/50"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
                                         initial={{ opacity: 0, x: 20 }}
@@ -498,10 +503,10 @@ export default function PortfolioLanding() {
                             whileHover={{ scale: 1.05, y: -2 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <span className="relative z-10 flex items-center justify-center space-x-2">
+                            <a href="https://cal.com/rishabhc/secret" className="relative z-10 flex items-center justify-center space-x-2">
                                 <span>Start a Project</span>
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </span>
+                            </a>
                             <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </motion.button>
                         <motion.button

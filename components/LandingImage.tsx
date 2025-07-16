@@ -117,7 +117,7 @@ export default function LandingImage() {
                 <motion.div
                     key={`center-${animationKey}`}
                     style={{ borderRadius: "40px" }}
-                    className="absolute shadow-2xl mb-40 shadow-orange-500/50 rounded-3xl top-6/12 left-6/12 lg:top-8/12 lg:left-8/12 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-xs"
+                    className="absolute shadow-2xl mb-40 shadow-orange-500/0 rounded-3xl top-6/12 left-6/12 lg:top-8/12 lg:left-8/12 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-xs"
                     initial={{
                         opacity: 0,
                         filter: "blur(4px)",
@@ -147,11 +147,19 @@ export default function LandingImage() {
                                     width={400}
                                     src="/rishabh profile casual2.png"
                                     alt="Rishabh Profile"
-                                    className="w-full h-3/4 mx-auto rounded-3xl object-cover"
+                                    className="w-48 h-2/4 mx-auto rounded-3xl object-cover"
                                     style={{ borderRadius: "40px" }}
                                 />
                             </div>
                             <SkillsText />
+                            <ul className="text-black p-2 mx-auto font-medium shadow-none text-xs md:text-sm leading-relaxed list-disc list-inside">
+                                <li>3+ years of experience as a SDE.</li>
+                                <li>Expertise in full stack development</li>
+                                <li>Proficient in DevOps practices and CI/CD</li>
+                                <li>Hands-on experience with AWS</li>
+                                <li>AI-powered web applications using LLM</li>
+                            </ul>
+
                         </motion.div>
                     </div>
                 </motion.div>

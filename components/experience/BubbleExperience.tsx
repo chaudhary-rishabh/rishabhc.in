@@ -34,8 +34,8 @@ const experienceData: ExperienceData[] = [
     },
     {
         id: 2,
-        company: "Appances Technologies",
-        position: "MERN Stack Developer",
+        company: "Appances Tech",
+        position: "MERN Stack",
         duration: "2023 - 2024",
         location: "Vadodara, IND",
         description:
@@ -110,7 +110,7 @@ export default function BubbleExperience() {
     return (
         <div className="w-full mx-auto p-4">
             {/* Main Experience Card */}
-            <motion.div ref={containerRef} style={{ x, scale: cardScale, rotateY: cardRotate }} className="relative mb-8">
+            <motion.div ref={containerRef} className="relative mb-8">
                 <div
                     className={`relative overflow-hidden w-full rounded-3xl bg-gradient-to-br ${currentExperience.color} p-6 shadow-2xl`}
                 >
