@@ -9,6 +9,7 @@ import {
     Award,
     Github,
     Linkedin,
+    XIcon,
     ExternalLink,
     ArrowRight,
     ChevronDown,
@@ -465,7 +466,7 @@ export default function PortfolioLanding() {
                         {[
                             { icon: Github, href: "https://github.com/chaudhary-rishabh", label: "GitHub" },
                             { icon: Linkedin, href: "https://www.linkedin.com/in/rishabh029/", label: "LinkedIn" },
-                            { icon: ExternalLink, href: "#", label: "Portfolio" },
+                            { icon: XIcon, href: "https://www.x.com/rishabhcdotdev", label: "Portfolio" },
                         ].map((social, index) => (
                             <motion.a
                                 key={index}
