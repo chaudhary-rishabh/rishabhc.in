@@ -2,7 +2,7 @@ import React from 'react'
 
 const Profile = () => {
     return (
-        <div className='bg-white rounded-3xl shadow-2xl shadow-orange-200 p-6 mx-auto mt-10'>
+        <div className='bg-white p-6 mx-auto'>
             {/* Profile Section Header */}
             <h1 className="text-2xl font-bold text-center text-black my-3">About</h1>
 

@@ -5,11 +5,10 @@ import { ExternalLink } from "lucide-react"
 
 export interface ProfileData {
     id: number
-    name: string
-    role: string
     company: string
     image: string
     bgColor: string
+    Link: string
 }
 
 interface ProfileCardProps {
@@ -50,15 +49,17 @@ export default function ProfileCard({ profile }: ProfileCardProps) {
                     </div>
 
                     {/* Company Badge with Link - Positioned at top */}
-                    <motion.div
-                        className="absolute top-2 left-2 right-2 flex items-center justify-between bg-black/60 rounded-lg backdrop-blur-sm text-white px-2 py-1 text-xs font-medium"
-                        whileHover={{ scale: 1.02 }}
-                    >
-                        <span className="truncate">{profile.company}</span>
-                        <motion.div whileHover={{ scale: 1.1, rotate: 15 }} transition={{ duration: 0.2 }}>
-                            <ExternalLink className="w-3 h-3 cursor-pointer hover:text-orange-400 transition-colors flex-shrink-0 ml-1" />
+                    <a href={profile.Link} target="_blank">
+                        <motion.div
+                            className="absolute top-2 left-2 right-2 flex items-center justify-between bg-black/60 rounded-lg backdrop-blur-sm text-white px-2 py-1 text-xs font-medium"
+                            whileHover={{ scale: 1.02 }}
+                        >
+                            <span className="truncate">{profile.company}</span>
+                            <motion.div whileHover={{ scale: 1.1, rotate: 15 }} transition={{ duration: 0.2 }}>
+                                <ExternalLink className="w-3 h-3 cursor-pointer hover:text-orange-400 transition-colors flex-shrink-0 ml-1" />
+                            </motion.div>
                         </motion.div>
-                    </motion.div>
+                    </a>
                 </div>
             </div>
         </div>

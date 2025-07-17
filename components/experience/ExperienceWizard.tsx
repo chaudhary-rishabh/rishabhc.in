@@ -80,7 +80,7 @@ export default function ExperienceWizard() {
     if (!hasMounted) return null
 
     return (
-        <div className="w-full max-w-4xl mx-auto px-4">
+        <div className="w-full mx-auto">
             {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}

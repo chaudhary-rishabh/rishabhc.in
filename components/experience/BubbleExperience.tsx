@@ -108,11 +108,14 @@ export default function BubbleExperience() {
     if (!hasMounted) return null
 
     return (
-        <div className="w-full mx-auto p-4">
+        <div className="w-full mx-auto p-1 sm:p-5">
             {/* Main Experience Card */}
-            <motion.div ref={containerRef} className="relative mb-8">
+            <h2 className="text-md md:text-xl mx-auto font-bold mb-3 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                Professional Experience
+            </h2>
+            <motion.div ref={containerRef} className="relative mb-3">
                 <div
-                    className={`relative overflow-hidden w-full rounded-3xl bg-gradient-to-br ${currentExperience.color} p-6 shadow-2xl`}
+                    className={`relative overflow-hidden w-full rounded-3xl bg-gradient-to-br ${currentExperience.color} p-3 sm:p-6 shadow-2xl`}
                 >
                     {/* Background Pattern */}
                     <div className="absolute inset-0 opacity-10">
@@ -129,11 +132,11 @@ export default function BubbleExperience() {
                             className="relative z-10"
                         >
                             {/* Main Content Card */}
-                            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-5 mb-4 shadow-lg">
+                            <div className="bg-white/95 w-full backdrop-blur-sm rounded-3xl p-5 mb-4 shadow-lg">
                                 <div className="flex items-start justify-between mb-3">
                                     <div>
                                         <h3 className="font-bold text-gray-900 text-lg leading-tight">{currentExperience.company}</h3>
-                                        <div className="flex items-center gap-2 text-blue-600 text-sm font-medium mt-1">
+                                        <div className="flex items-center gap-2 text-sm font-medium mt-1">
                                             <Calendar className="w-3 h-3" />
                                             {currentExperience.duration}
                                         </div>
@@ -176,7 +179,7 @@ export default function BubbleExperience() {
 
             {/* Bubble Navigation with Rope-like Connections */}
             <div className="relative">
-                <div className={`bg-gradient-to-r from-orange-50 to-orange-200 rounded-3xl p-4 shadow-xl`}>
+                <div className={`bg-gradient-to-r from-orange-50 to-orange-200 rounded-3xl p-3 shadow-xl`}>
                     <div className="relative flex items-center justify-between">
                         {/* SVG for Rope-like Connections */}
                         <svg
