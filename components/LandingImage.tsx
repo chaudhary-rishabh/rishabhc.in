@@ -110,7 +110,7 @@ export default function LandingImage() {
                 <motion.div
                     key={`center-${animationKey}`}
                     style={{ borderRadius: "40px" }}
-                    className="absolute shadow-2xl mb-40 shadow-orange-500/0 rounded-3xl top-6/12 left-6/12 lg:top-8/12 lg:left-8/12 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-xs"
+                    className="absolute shadow-2xl mb-40 shadow-orange-500/0 rounded-3xl top-6/12 left-6/12 lg:top-8/12 lg:left-8/12 transform -translate-x-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-xs"
                     initial={{
                         opacity: 0,
                         filter: "blur(4px)",
@@ -221,7 +221,7 @@ export default function LandingImage() {
                 {/* Right top box */}
                 <motion.div
                     key={`intro-right-${animationKey}`}
-                    className="absolute top-4 right-2 md:top-4 md:right-32 z-20"
+                    className="absolute top-4 md:top-4 md:right-32 z-20"
                     initial={{
                         opacity: 0,
                         filter: "blur(10px)",
@@ -241,7 +241,7 @@ export default function LandingImage() {
                     }}
                 >
                     <motion.div
-                        className="bg-white/95 mt-[380px] sm:mt-[440px] sm:mr-20 backdrop-blur-sm rounded-xl md:rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-xl border border-orange-200 max-w-[200px] md:max-w-xs"
+                        className="bg-white/95 mt-[370px] sm:mt-[410px] mx-auto backdrop-blur-sm rounded-2xl md:rounded-3xl px-3 py-2 md:px-4 md:py-3 shadow-md shadow-gray-500 border border-orange-200 w-[340px] md:max-w-md"
                         animate={{
                             y: [0, -6, 0],
                             boxShadow: [
@@ -276,8 +276,8 @@ export default function LandingImage() {
                             <div className="w-1 h-1 md:w-2 md:h-2 bg-green-400 rounded-full animate-pulse"></div>
                         </div>
                         <a href="https://pairskill.in" className="text-gray-800 cursor-pointer font-medium text-xs md:text-sm leading-relaxed">
-                            Turning ideas into products.<br />
-                            Building pairskill.in
+                            Turning ideas into products.Building pairskill.in
+                            
                         </a>
                     </motion.div>
                 </motion.div>
