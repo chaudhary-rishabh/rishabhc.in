@@ -12,6 +12,7 @@ interface ExperienceData {
     duration: string
     location: string
     description: string
+    descriptionTwo: string
     logo: string
     color: string
     achievements: string[]
@@ -27,6 +28,8 @@ const experienceData: ExperienceData[] = [
         location: "Vadodara, IND",
         description:
             "Developed and Deployed Full Stack Web Applications using Nextjs, Node.js, and MySql.  Created Nextjs ERP, CRM, HRM application with Redux and Zustand and handling 1000+ tables in MySql Deployed using jenkins and github action.",
+        descriptionTwo:
+            "Prevented too much re-rendering by correctly structuring state-management used react.memo and redux.",
         logo: "/aloisImg.png",
         link: "https://aloissolution.com/",
         color: "from-orange-300 to-orange-600",
@@ -40,6 +43,8 @@ const experienceData: ExperienceData[] = [
         location: "Vadodara, IND",
         description:
             "Developed responsive web applications and mobile-first designs in Reactjs with Redux/Recoil Stage Management. Deployed to AWS and Vercel. Collaborated with UX/UI teams to create intuitive user experiences.",
+        descriptionTwo:
+            "Implemented lazy loading and code splitting for performance optimization.",
         logo: "/appanceImg.png",
         link: "https://appance.in/",
         color: "from-orange-300 to-orange-600",
@@ -53,6 +58,8 @@ const experienceData: ExperienceData[] = [
         location: "Ahmedabad, IND",
         description:
             "Leading development of scalable web applications using React, Node.js, and AWS. Mentoring junior developers and architecting microservices solutions.",
+        descriptionTwo:
+            "Basics of MERN Stack and Javascript.",
         logo: "/vercel.svg",
         link: "https://n10tech.com",
         color: "from-orange-300 to-orange-600",
@@ -108,9 +115,9 @@ export default function BubbleExperience() {
     if (!hasMounted) return null
 
     return (
-        <div className="w-full mx-auto p-1 sm:p-5">
+        <div className="w-full mx-auto p-1 sm:p-14">
             {/* Main Experience Card */}
-            <h2 className="text-md md:text-xl mx-auto font-bold mb-3 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+            <h2 className="text-md md:text-xl text-center font-bold mb-3 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
                 Professional Experience
             </h2>
             <motion.div ref={containerRef} className="relative mb-3">
@@ -132,25 +139,16 @@ export default function BubbleExperience() {
                             className="relative z-10"
                         >
                             {/* Main Content Card */}
-                            <div className="bg-white/95 w-full backdrop-blur-sm rounded-3xl p-5 mb-4 shadow-lg">
-                                <div className="flex items-start justify-between mb-3">
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 text-lg leading-tight">{currentExperience.company}</h3>
-                                        <div className="flex items-center gap-2 text-sm font-medium mt-1">
-                                            <Calendar className="w-3 h-3" />
-                                            {currentExperience.duration}
-                                        </div>
-                                    </div>
-                                    <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
-                                        <Building2 className="w-6 h-6 text-gray-600" />
-                                    </div>
-                                </div>
+                            <div className="bg-white/95 w-full backdrop-blur-sm rounded-3xl sm:p-10 p-5 mb-4 shadow-lg">
 
                                 <p className="text-gray-700 text-sm leading-relaxed mb-3">{currentExperience.description}</p>
+                                <p className="text-gray-700 text-sm leading-relaxed mb-3">{currentExperience.descriptionTwo}</p>
 
                                 <div className="flex items-center gap-2 text-gray-500 text-xs">
                                     <MapPin className="w-3 h-3" />
                                     {currentExperience.location}
+                                    <Calendar className="w-3 h-3" />
+                                    {currentExperience.duration}
                                 </div>
                             </div>
 

@@ -51,7 +51,6 @@ const sections = [
                     "User Authentication & Profiles",
                     "Course Management System",
                     "Payment Integration",
-                    "Progress Tracking",
                 ],
                 testimonial: {
                     text: "The platform demonstrates exceptional technical skills and creative problem-solving. Each feature showcases attention to detail and user-centered design principles.",
@@ -68,7 +67,7 @@ const sections = [
                 image: "/rishabh-project-one.png",
                 github: "github.com/chaudhary-rishabh/yogice",
                 preview: "https://yogice.in/",
-                features: ["Real-time Analytics", "Inventory Management", "Order Processing", "Customer Insights"],
+                features: ["Real-time Analytics", "Inventory Management", "Customer Insights"],
                 testimonial: {
                     text: "Outstanding work on the dashboard! The intuitive design and powerful features have significantly improved our operational efficiency.",
                     author: "Mike Chen",
@@ -85,7 +84,7 @@ const sections = [
                 image: "/rishabh-project-one.png",
                 github: "github.com/chaudhary-rishabh/sakmap",
                 preview: "https://sakmap.com/",
-                features: ["Cross-platform Mobile App", "Offline Synchronization", "Team Collaboration", "Project Templates"],
+                features: ["Offline Sync", "Team Collaboration", "Project Templates"],
                 testimonial: {
                     text: "The app has transformed how our team manages projects. Clean interface, robust functionality, and excellent performance across all devices.",
                     author: "Lisa Rodriguez",
@@ -101,7 +100,7 @@ const sections = [
                 image: "/rishabh-project-one.png",
                 github: "github.com/chaudhary-rishabh/sakmap",
                 preview: "https://sakmap.com/",
-                features: ["Real-time Data Visualization", "Custom Reports", "Export Functionality", "Multi-tenant Support"],
+                features: ["Custom Reports", "Export Functionality", "Multi-tenant Support"],
                 testimonial: {
                     text: "The analytics dashboard provides incredible insights into our business metrics. The visualizations are clear and actionable.",
                     author: "Alex Thompson",
@@ -213,7 +212,7 @@ export default function PortfolioLanding() {
         if (!currentProject) return null
 
         return (
-            <div className="space-y-6">
+            <div className="space-y-4">
                 {/* Project Image */}
                 <motion.div
                     className="w-full h-64 sm:h-80 rounded-3xl bg-gradient-to-br from-white to-white shadow-2xl shadow-orange-200/60 flex items-center justify-center overflow-hidden"
@@ -221,7 +220,7 @@ export default function PortfolioLanding() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="w-full h-full border border-orange-500 rounded-3xl bg-white/10 backdrop-blur-xs overflow-hidden">
+                    <div className="w-full h-full rounded-3xl bg-white/10 backdrop-blur-xs overflow-hidden">
                         <Image
                             src={currentProject.image || "/placeholder.svg"}
                             height={600}
