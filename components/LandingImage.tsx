@@ -9,12 +9,6 @@ import {
 } from "lucide-react"
 import SkillsText from "./SkillsText"
 import StickyNavigation from "./sticky-navigation"
-const skills = [
-    { name: "AWS", icon: Cloud, color: "bg-orange-500" },
-    // { name: "MERN Stack", icon: Code, color: "bg-green-500" },
-    { name: "DevOps", icon: Server, color: "bg-blue-500" },
-    { name: "Full Stack", icon: Layers, color: "bg-purple-500" },
-]
 
 const sparkles = [
     { id: 1, size: "w-2 h-2 md:w-3 md:h-3", delay: 0 },
@@ -43,7 +37,6 @@ export default function LandingImage() {
         }
     }, [])
 
-    const displaySkills = isMobile ? skills.slice(0, 3) : skills.slice(0, 5)
     const itemVariants = {
         hidden: { opacity: 0, y: 30 },
         visible: {
@@ -138,7 +131,7 @@ export default function LandingImage() {
                 >
                     <div className="relative">
                         <motion.div
-                            className="w-72 h-96 md:w-48 md:h-52 lg:w-96 lg:h-96 rounded-3xl bg-white/25 backdrop-blur-xs p-1"
+                            className="w-72 h-96 md:w-48 md:h-52 lg:w-96 lg:h-96 rounded-3xl bg-white/10 backdrop-blur-xs p-1"
                             style={{borderRadius: "40px"}}
                         >
                             <div className="w-full h-full rounded-3xl bg-white/10 backdrop-blur-xs p-1 md:p-2" style={{ borderRadius: "40px" }}>
@@ -152,11 +145,9 @@ export default function LandingImage() {
                                 />
                             </div>
                             <SkillsText />
-                            <ul className="text-black p-2 mx-auto font-medium shadow-none text-xs md:text-sm leading-relaxed list-disc list-inside">
-                                <li>3+ years of experience as a SDE.</li>
-                                <li>Expertise in full stack development</li>
+                            <ul className="text-gray-800 p-2 mx-auto font-medium shadow-none text-xs md:text-sm leading-relaxed list-disc list-inside">
+                                <li>Expertise in Full-Stack Development</li>
                                 <li>Proficient in DevOps practices and CI/CD</li>
-                                <li>Hands-on experience with AWS</li>
                                 <li>AI-powered web applications using LLM</li>
                             </ul>
 
@@ -169,7 +160,7 @@ export default function LandingImage() {
                 {/* Left bottom box */}
                 <motion.div
                     key={`intro-left-${animationKey}`}
-                    className="absolute bottom-4 left-2 md:bottom-8 md:left-4 z-20"
+                    className="absolute hidden sm:hidden bottom-4 left-2 md:bottom-8 md:left-4 z-20"
                     initial={{
                         opacity: 0,
                         filter: "blur(10px)",
@@ -230,7 +221,7 @@ export default function LandingImage() {
                 {/* Right top box */}
                 <motion.div
                     key={`intro-right-${animationKey}`}
-                    className="absolute top-4 right-2 md:top-2 md:right-4 z-20"
+                    className="absolute top-4 right-2 md:top-4 md:right-32 z-20"
                     initial={{
                         opacity: 0,
                         filter: "blur(10px)",
@@ -279,115 +270,18 @@ export default function LandingImage() {
                         }}
                     >
                         <div className="flex items-center gap-2 mb-1 md:mb-2">
-                            <div className="p-1 md:p-2 bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-md md:rounded-lg">
-                                <Layers className="w-3 h-3 md:w-5 md:h-5 text-white" />
+                            <div className="p-1 bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 rounded-md md:rounded-lg">
+                                <Layers className="w-3 h-3 md:w-3 md:h-3 text-white" />
                             </div>
                             <div className="w-1 h-1 md:w-2 md:h-2 bg-green-400 rounded-full animate-pulse"></div>
                         </div>
-                        <p className="text-gray-800 font-medium text-xs md:text-sm leading-relaxed">
-                            Versatile Full Stack Developer
-                        </p>
+                        <a href="https://pairskill.in" className="text-gray-800 cursor-pointer font-medium text-xs md:text-sm leading-relaxed">
+                            Turning ideas into products.<br />
+                            Building pairskill.in
+                        </a>
                     </motion.div>
                 </motion.div>
 
-                {/* Floating skill cards */}
-                <AnimatePresence>
-                    {displaySkills.map((skill, index) => {
-                        // Compact positioning for single frame view
-                        const positions = [
-                            { top: "20%", left: "15%", delay: 0 },
-                            { top: "30%", right: "15%", delay: 0.5 },
-                            { top: "60%", left: "15%", delay: 1 },
-                            { top: "20%", right: "15%", delay: 1.5 },
-                            { top: "10%", left: "5%", delay: 2 },
-                        ]
-
-                        const position = positions[index] || positions[0]
-
-                        return (
-                            <motion.div
-                                key={`skill-${animationKey}-${index}`}
-                                className="absolute hidden md:block"
-                                style={{
-                                    top: position.top,
-                                    left: position.left,
-                                    right: position.right,
-                                }}
-                                initial={{
-                                    y: 50,
-                                    opacity: 0,
-                                    scale: 0.8,
-                                }}
-                                animate={{
-                                    y: [0, -15, 0],
-                                    opacity: 1,
-                                    scale: 1,
-                                }}
-                                exit={{
-                                    y: 50,
-                                    opacity: 0,
-                                    scale: 0.8,
-                                }}
-                                transition={{
-                                    y: {
-                                        duration: 3 + index * 0.3,
-                                        repeat: Number.POSITIVE_INFINITY,
-                                        ease: "easeInOut",
-                                        delay: position.delay,
-                                    },
-                                    opacity: {
-                                        duration: 0.8,
-                                        delay: position.delay,
-                                    },
-                                    scale: {
-                                        duration: 0.8,
-                                        delay: position.delay,
-                                    },
-                                }}
-                            >
-                                <motion.div
-                                    className="flex items-center gap-2 md:gap-3 bg-white/95 backdrop-blur-sm rounded-lg md:rounded-xl px-2 py-2 md:px-3 md:py-2 shadow-lg border border-orange-200 hover:shadow-xl transition-shadow duration-300"
-                                    whileHover={{
-                                        scale: 1.05,
-                                        y: -5,
-                                        transition: { duration: 0.2 },
-                                    }}
-                                    animate={{
-                                        boxShadow: [
-                                            "0 8px 20px rgba(0,0,0,0.1)",
-                                            "0 12px 30px rgba(251,146,60,0.15)",
-                                            "0 8px 20px rgba(0,0,0,0.1)",
-                                        ],
-                                    }}
-                                    transition={{
-                                        boxShadow: {
-                                            duration: 4,
-                                            repeat: Number.POSITIVE_INFINITY,
-                                            ease: "easeInOut",
-                                            delay: position.delay,
-                                        },
-                                    }}
-                                >
-                                    <motion.div
-                                        className={`p-1 md:p-2 rounded-md md:rounded-lg ${skill.color}`}
-                                        animate={{
-                                            scale: [1, 1.1, 1],
-                                        }}
-                                        transition={{
-                                            duration: 2,
-                                            repeat: Number.POSITIVE_INFINITY,
-                                            ease: "easeInOut",
-                                            delay: position.delay + 1,
-                                        }}
-                                    >
-                                        <skill.icon className="w-3 h-3 md:w-4 md:h-4 text-white" />
-                                    </motion.div>
-                                    <span className="font-semibold text-gray-800 whitespace-nowrap text-xs md:text-sm">{skill.name}</span>
-                                </motion.div>
-                            </motion.div>
-                        )
-                    })}
-                </AnimatePresence>
 
             </div>
         </div>
