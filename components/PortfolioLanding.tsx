@@ -40,16 +40,16 @@ const sections = [
         projects: [
             {
                 id: 1,
-                name: "Course Selling Platform",
-                tech: "Supabase, Next.js, Tailwind",
+                name: "Maid Booking Platform",
+                tech: "Next.js, Express.js, Prisma, Stripe",
                 description:
-                    "A comprehensive e-learning platform with user authentication, course management, and payment integration",
-                image: "/rishabh-project-two.png",
-                github: "github.com/chaudhary-rishabh/sakmap",
-                preview: "https://sakmap.com/",
+                    "A fully functional maid booking system with user authentication, maid profiles, and secure online payments via Stripe.",
+                image: "/rishabh_project_maido.png",
+                github: "https://github.com/chaudhary-rishabh/maid-booking-platform",
+                preview: "https://maidbooker.com/",
                 features: [
                     "User Authentication & Profiles",
-                    "Course Management System",
+                    "Maid Booking System",
                     "Payment Integration",
                 ],
                 testimonial: {
@@ -61,11 +61,96 @@ const sections = [
             },
             {
                 id: 2,
+                name: "CRM with AI",
+                tech: "OpenAI, Next.js, MySQL, Node.js",
+                description:
+                    "A smart CRM platform that leverages OpenAI-powered chat assistance along with traditional CRM modules and user management.",
+                image: "/rishabh_project_crm.png",
+                github: "https://github.com/chaudhary-rishabh/crm-ai",
+                preview: "https://crm-ai.sakmap.com/",
+                features: [
+                    "User Authentication & Profiles",
+                    "All CRM Modules",
+                    "AI-Powered LLM Chatbot",
+                ],
+                testimonial: {
+                    text: "The platform demonstrates exceptional technical skills and creative problem-solving. Each feature showcases attention to detail and user-centered design principles.",
+                    author: "Sarah Johnson",
+                    role: "Product Manager at EduTech",
+                },
+                icon: Users,
+            },
+            {
+                id: 3,
+                name: "Sakmap E-Learning",
+                tech: "Next.js, Supabase, RPC, Razorpay",
+                description:
+                    "A robust e-learning portal offering secure user login, online video courses, and Razorpay-based subscription payments.",
+                image: "/rishabh-project-two.png",
+                github: "https://github.com/chaudhary-rishabh/sakmap",
+                preview: "https://sakmap.com/",
+                features: [
+                    "User Authentication & Profiles",
+                    "Online Courses with Videojs",
+                    "Payment Integration",
+                ],
+                testimonial: {
+                    text: "The platform demonstrates exceptional technical skills and creative problem-solving. Each feature showcases attention to detail and user-centered design principles.",
+                    author: "Sarah Johnson",
+                    role: "Product Manager at EduTech",
+                },
+                icon: Users,
+            },
+            {
+                id: 4,
+                name: "Daily Task Management",
+                tech: "Next.js, Zustand, Radix-UI, Redis",
+                description:
+                    "A high-performance task manager with state management via Zustand, elegant UI using Radix, and Redis for real-time updates.",
+                image: "/rishabh_project_dailyTodo.png",
+                github: "https://github.com/chaudhary-rishabh/daily-task-manager",
+                preview: "https://realtask.com/",
+                features: [
+                    "Redis Caching",
+                    "Zustand State Management",
+                    "Minimal Re-rendering",
+                ],
+                testimonial: {
+                    text: "The platform demonstrates exceptional technical skills and creative problem-solving. Each feature showcases attention to detail and user-centered design principles.",
+                    author: "Sarah Johnson",
+                    role: "Product Manager at EduTech",
+                },
+                icon: Users,
+            },
+            {
+                id: 5,
+                name: "E-commerce Platform",
+                tech: "Express.js, Next.js, Tailwind, MongoDB",
+                description:
+                    "A modern e-commerce platform with full-stack integration for product listings, cart, admin dashboard, and secure Razorpay payments.",
+                image: "/rishabh_project_glace.png",
+                github: "https://github.com/chaudhary-rishabh/glace",
+                preview: "https://glacejuice.in/",
+                features: [
+                    "User & Admin Authentication",
+                    "Dynamic APIs",
+                    "Payment Integration Razor Pay",
+                ],
+                testimonial: {
+                    text: "The platform demonstrates exceptional technical skills and creative problem-solving. Each feature showcases attention to detail and user-centered design principles.",
+                    author: "Sarah Johnson",
+                    role: "Product Manager at EduTech",
+                },
+                icon: Users,
+            },
+            {
+                id: 6,
                 name: "E-Commerce Dashboard",
-                tech: "React, Tailwind, Node.js",
-                description: "Modern e-commerce management with real-time analytics and inventory control",
-                image: "/rishabh-project-one.png",
-                github: "github.com/chaudhary-rishabh/yogice",
+                tech: "React, CSS",
+                description:
+                    "An intuitive e-commerce admin dashboard with live analytics, inventory tracking, and insightful customer data.",
+                image: "/rishabh_project_yogice.png",
+                github: "https://github.com/chaudhary-rishabh/yogice",
                 preview: "https://yogice.in/",
                 features: ["Real-time Analytics", "Inventory Management", "Customer Insights"],
                 testimonial: {
@@ -76,30 +161,31 @@ const sections = [
                 icon: ShoppingCart,
             },
             {
-                id: 3,
-                name: "Task Management App",
-                tech: "React Native, Firebase, Redux",
+                id: 7,
+                name: "MLM",
+                tech: "Supabase, Next.js, Framer-Motion",
                 description:
-                    "Cross-platform mobile app for team collaboration and project management with offline capabilities",
-                image: "/rishabh-project-one.png",
-                github: "github.com/chaudhary-rishabh/sakmap",
-                preview: "https://sakmap.com/",
-                features: ["Offline Sync", "Team Collaboration", "Project Templates"],
+                    "A multi-level marketing analytics dashboard with custom reports, export functionality, and multi-tenant support.",
+                image: "/rishabh_project_mlm.png",
+                github: "https://github.com/chaudhary-rishabh",
+                preview: "https://mlm-spices.vercel.app/",
+                features: ["Custom Reports", "Export Functionality", "Multi-tenant Support"],
                 testimonial: {
-                    text: "The app has transformed how our team manages projects. Clean interface, robust functionality, and excellent performance across all devices.",
-                    author: "Lisa Rodriguez",
-                    role: "Team Lead at StartupHub",
+                    text: "The analytics dashboard provides incredible insights into our business metrics. The visualizations are clear and actionable.",
+                    author: "Alex Thompson",
+                    role: "Data Analyst at TechCorp",
                 },
-                icon: Smartphone,
+                icon: Database,
             },
             {
-                id: 4,
-                name: "Analytics Dashboard",
-                tech: "React Native, Firebase, Redux",
-                description: "Real-time analytics dashboard with data visualization and reporting capabilities",
-                image: "/rishabh-project-one.png",
-                github: "github.com/chaudhary-rishabh/sakmap",
-                preview: "https://sakmap.com/",
+                id: 8,
+                name: "PairSkill",
+                tech: "in Progress",
+                description:
+                    "A collaborative upskilling platform featuring multi-tenant architecture, exportable reports, and intelligent analytics modules.",
+                image: "/vercel.svg",
+                github: "https://github.com/chaudhary-rishabh/pairskill",
+                preview: "https://pairskill.com/",
                 features: ["Custom Reports", "Export Functionality", "Multi-tenant Support"],
                 testimonial: {
                     text: "The analytics dashboard provides incredible insights into our business metrics. The visualizations are clear and actionable.",
@@ -109,6 +195,7 @@ const sections = [
                 icon: Database,
             },
         ],
+
     },
     {
         id: "skills",
