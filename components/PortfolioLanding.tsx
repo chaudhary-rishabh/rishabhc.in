@@ -45,7 +45,7 @@ const sections = [
                 description:
                     "A fully functional maid booking system with user authentication, maid profiles, and secure online payments via Stripe.",
                 image: "/rishabh_project_maido.png",
-                github: "https://github.com/chaudhary-rishabh/maid-booking-platform",
+                github: "https://github.com/chaudhary-rishabh/maido-backend",
                 preview: "https://maidbooker.com/",
                 features: [
                     "User Authentication & Profiles",
@@ -129,7 +129,7 @@ const sections = [
                 description:
                     "A modern e-commerce platform with full-stack integration for product listings, cart, admin dashboard, and secure Razorpay payments.",
                 image: "/rishabh_project_glace.png",
-                github: "https://github.com/chaudhary-rishabh/glace",
+                github: "https://github.com/chaudhary-rishabh/glace-frontend",
                 preview: "https://glacejuice.in/",
                 features: [
                     "User & Admin Authentication",
@@ -185,7 +185,7 @@ const sections = [
                     "A collaborative upskilling platform featuring multi-tenant architecture, exportable reports, and intelligent analytics modules.",
                 image: "/vercel.svg",
                 github: "https://github.com/chaudhary-rishabh/pairskill",
-                preview: "https://pairskill.com/",
+                preview: "https://pairskill.in/",
                 features: ["Custom Reports", "Export Functionality", "Multi-tenant Support"],
                 testimonial: {
                     text: "The analytics dashboard provides incredible insights into our business metrics. The visualizations are clear and actionable.",
