@@ -44,9 +44,9 @@ const sections = [
                 tech: "Next.js, Express.js, Prisma, Stripe",
                 description:
                     "A fully functional maid booking system with user authentication, maid profiles, and secure online payments via Stripe.",
-                image: "/rishabh_project_maido.png",
+                image: "/rishabh_project_maidorder.png",
                 github: "https://github.com/chaudhary-rishabh/maido-backend",
-                preview: "https://maidbooker.com/",
+                preview: "",
                 features: [
                     "User Authentication & Profiles",
                     "Maid Booking System",

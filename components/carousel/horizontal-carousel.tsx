@@ -38,7 +38,7 @@ const profilesData: ProfileData[] = [
     {
         id: 4,
         company: "Maidnow",
-        image: "/rishabh_project_maido.png",
+        image: "/rishabh_project_maidorder.png",
         bgColor: "bg-gradient-to-br from-orange-400 to-orange-500",
         Link: "https://sakmap.com",
     },
