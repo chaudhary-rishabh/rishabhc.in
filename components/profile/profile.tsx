@@ -8,7 +8,8 @@ const Profile = () => {
 
             <p className="text-gray-600 py-2 sm:text-md text-sm">
                 I&rsquo;m a <strong>Full Stack Developer</strong> passionate about building impactful web applications. I&rsquo;ve <strong>developed and deployed</strong> products like{' '}
-                <a href="https://pairskill.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">pairskill.com</a>,{' '}
+                <a href="https://flexai.chat" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">flexai.chat</a>,{' '}
+                <a href="https://pairskill.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">pairskill.in</a>,{' '}
                 <a href="https://maido.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">maido.in</a>,{' '}
                 <a href="https://yogice.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">yogice.in</a>, {' '}
                 <a href="https://sakmap.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-semibold underline">sakmap.com</a>,{' '}and{' '}
