@@ -40,13 +40,34 @@ const sections = [
         projects: [
             {
                 id: 1,
+                name: "AI Chat Assistant FlexAI",
+                tech: "Mongodb, Redis, AWS, Next.js, Express.js, Razorpay",
+                description:
+                    "A chatgpt replica  with advanced UI/UX features like conversation history, user profiles, and secure payments using Razorpay.",
+                image: "/rishabh-project-flexai.png",
+                github: "https://github.com/chaudhary-rishabh",
+                preview: "https://flexai.chat/",
+                features: [
+                    "CRM Integration, Chat Library",
+                    "LLM chatbot",
+                    "Project Management",
+                ],
+                testimonial: {
+                    text: "The platform demonstrates exceptional technical skills and creative problem-solving. Each feature showcases attention to detail and user-centered design principles.",
+                    author: "Sarah Johnson",
+                    role: "Product Manager",
+                },
+                icon: Users,
+            },
+            {
+                id: 2,
                 name: "Maid Booking Platform",
                 tech: "Next.js, Express.js, Prisma, Stripe",
                 description:
                     "A fully functional maid booking system with user authentication, maid profiles, and secure online payments via Stripe.",
                 image: "/rishabh_project_maidorder.png",
                 github: "https://github.com/chaudhary-rishabh/maido-backend",
-                preview: "",
+                preview: "https://maido-frontend.vercel.app",
                 features: [
                     "User Authentication & Profiles",
                     "Maid Booking System",
@@ -60,14 +81,14 @@ const sections = [
                 icon: Users,
             },
             {
-                id: 2,
+                id: 3,
                 name: "CRM with AI",
                 tech: "OpenAI, Next.js, MySQL, Node.js",
                 description:
                     "A smart CRM platform that leverages OpenAI-powered chat assistance along with traditional CRM modules and user management.",
                 image: "/rishabh_project_crm.png",
                 github: "https://github.com/chaudhary-rishabh/crm-ai",
-                preview: "https://crm-ai.sakmap.com/",
+                preview: "",
                 features: [
                     "User Authentication & Profiles",
                     "All CRM Modules",
@@ -81,7 +102,7 @@ const sections = [
                 icon: Users,
             },
             {
-                id: 3,
+                id: 4,
                 name: "Sakmap E-Learning",
                 tech: "Next.js, Supabase, RPC, Razorpay",
                 description:
@@ -102,7 +123,7 @@ const sections = [
                 icon: Users,
             },
             {
-                id: 4,
+                id: 5,
                 name: "Daily Task Management",
                 tech: "Next.js, Zustand, Radix-UI, Redis",
                 description:
@@ -123,7 +144,7 @@ const sections = [
                 icon: Users,
             },
             {
-                id: 5,
+                id: 6,
                 name: "E-commerce Platform",
                 tech: "Express.js, Next.js, Tailwind, MongoDB",
                 description:
@@ -144,7 +165,7 @@ const sections = [
                 icon: Users,
             },
             {
-                id: 6,
+                id: 7,
                 name: "E-Commerce Dashboard",
                 tech: "React, CSS",
                 description:
@@ -161,7 +182,7 @@ const sections = [
                 icon: ShoppingCart,
             },
             {
-                id: 7,
+                id: 8,
                 name: "MLM",
                 tech: "Supabase, Next.js, Framer-Motion",
                 description:
@@ -178,7 +199,7 @@ const sections = [
                 icon: Database,
             },
             {
-                id: 8,
+                id: 9,
                 name: "PairSkill",
                 tech: "in Progress",
                 description:
