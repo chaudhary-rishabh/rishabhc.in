@@ -20,6 +20,12 @@ export default function AestheticLayout({ children, className = "" }: AestheticL
                     animate={{ scaleY: 1 }}
                     transition={{ duration: 2, ease: "easeInOut" }}
                 />
+                <motion.div
+                    className="absolute left-8 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-orange-400 to-transparent"
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                />
 
                 {/* Horizontal connecting lines */}
                 {[...Array(3)].map((_, i) => (
@@ -39,6 +45,12 @@ export default function AestheticLayout({ children, className = "" }: AestheticL
                 {/* Main vertical line */}
                 <motion.div
                     className="absolute right-4 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-orange-400 to-transparent"
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}
+                    transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
+                />
+                <motion.div
+                    className="absolute right-8 top-0 w-0.5 h-full bg-gradient-to-b from-transparent via-orange-400 to-transparent"
                     initial={{ scaleY: 0 }}
                     animate={{ scaleY: 1 }}
                     transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}

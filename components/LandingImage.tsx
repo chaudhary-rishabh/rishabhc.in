@@ -129,6 +129,17 @@ export default function LandingImage() {
                         ease: "easeOut",
                     }}
                 >
+                    <div
+                        className="absolute inset-0 rounded-[40px] opacity-30 pointer-events-none"
+                        style={{
+                            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='8' stitchTiles='stitch' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+                            mixBlendMode: "color-burn",
+                        }}
+                    />
+
+                    {/* Shimmer Layer */}
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-orange-300 to-transparent opacity-60 animate-shimmer pointer-events-none" />
+
                     <div className="relative">
                         <motion.div
                             className="w-72 h-96 md:w-48 md:h-52 lg:w-96 lg:h-96 rounded-3xl bg-white/10 backdrop-blur-xs p-1"
