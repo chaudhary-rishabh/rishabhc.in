@@ -28,6 +28,7 @@ import Profile from "./profile/profile"
 import Image from "next/image"
 import EnhancedSkillsSection from "./profile/enhanced-skills-section"
 import SectionSeparator from "./section-separator"
+import AsymmetricalGrid from "./grid/asymmetrical-grid"
 
 // Enhanced sections with multiple projects
 const sections = [
@@ -561,8 +562,8 @@ export default function PortfolioLanding() {
                 <SectionSeparator />
 
                 {/* Enhanced Skills Section */}
-                {/* <EnhancedSkillsSection /> */}
-                {/* <SectionSeparator /> */}
+                <AsymmetricalGrid />
+                <SectionSeparator />
 
                 {/* Contact Section */}
                 <ContactForm />
