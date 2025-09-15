@@ -561,8 +561,8 @@ export default function PortfolioLanding() {
                 <SectionSeparator />
 
                 {/* Enhanced Skills Section */}
-                <EnhancedSkillsSection />
-                <SectionSeparator />
+                {/* <EnhancedSkillsSection /> */}
+                {/* <SectionSeparator /> */}
 
                 {/* Contact Section */}
                 <ContactForm />
