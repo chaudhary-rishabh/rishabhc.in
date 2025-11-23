@@ -417,17 +417,20 @@ export default function PortfolioLanding() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-500/60 via-orange-50 to-orange-400/90 font-sans">
+        <div className="min-h-screen bg-orange-300 font-sans">
             {/* noise effect */}
-            <div
-                className="absolute inset-0 z-10 pointer-events-none 
-                bg-[url('https://www.ui-layouts.com/noise.gif')] 
-                mix-blend-overlay"
-                style={{
-                    opacity: 0.35,        
-                    filter: "grayscale(0)" 
-                }}
-                ></div>
+            {/* Grainy Texture */}
+                <div
+                    className="absolute inset-0 opacity-95 pointer-events-none"
+                    style={{
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='8' stitchTiles='stitch' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+                        mixBlendMode: "normal",
+                    }}
+                />
+
+                {/* Shimmer Layer */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-white to-orange-400 opacity-70 animate-shimmer pointer-events-none" />
+
             {/* Main Content */}
             <main className="container mx-auto px-4 sm:px-6 relative z-10">
                 {/* Landing main page */}
