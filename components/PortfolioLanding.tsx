@@ -561,9 +561,6 @@ export default function PortfolioLanding() {
 
                 <SectionSeparator />
 
-                {/* Enhanced Skills Section */}
-                <AsymmetricalGrid />
-                <SectionSeparator />
 
                 {/* Contact Section */}
                 <ContactForm />
