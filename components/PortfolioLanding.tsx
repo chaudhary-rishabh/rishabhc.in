@@ -417,7 +417,17 @@ export default function PortfolioLanding() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-300/50 via-orange-50 to-orange-200/90 font-sans">
+        <div className="min-h-screen bg-gradient-to-br from-orange-500/60 via-orange-50 to-orange-400/90 font-sans">
+            {/* noise effect */}
+            <div
+                className="absolute inset-0 z-10 pointer-events-none 
+                bg-[url('https://www.ui-layouts.com/noise.gif')] 
+                mix-blend-overlay"
+                style={{
+                    opacity: 0.35,        
+                    filter: "grayscale(0)" 
+                }}
+                ></div>
             {/* Main Content */}
             <main className="container mx-auto px-4 sm:px-6 relative z-10">
                 {/* Landing main page */}
@@ -525,8 +535,8 @@ export default function PortfolioLanding() {
                                 variants={itemVariants}
                                 onClick={() => handleSectionChange(section.id)}
                                 className={`
-                                    group relative outline-none flex flex-col sm:flex-row items-center justify-center sm:space-x-3 px-4 sm:px-8 py-3 sm:py-2
-                                     rounded-3xl transition-all duration-300 font-semibold text-sm sm:text-base overflow-hidden
+                                    group relative outline-none flex flex-col sm:flex-row items-center justify-center sm:space-x-3 px-4 sm:px-4 py-3 sm:py-2
+                                    rounded-2xl m-2 transition-all duration-300 font-semibold text-sm sm:text-base overflow-hidden
                                     ${isActive
                                         ? "bg-orange-200 text-gray-900 shadow-2xl shadow-gray-500/60 scale-105"
                                         : "bg-white/90 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 shadow-orange-500/10 hover:scale-105"
@@ -560,7 +570,6 @@ export default function PortfolioLanding() {
                 </motion.div>
 
                 <SectionSeparator />
-
 
                 {/* Contact Section */}
                 <ContactForm />
